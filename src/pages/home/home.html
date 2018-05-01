@@ -1,0 +1,19 @@
+<!--Fist Screen-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon class="icon-menu" name="menu"></ion-icon>
+        </button>
+        <ion-title> <img alt="{{data.logosmall}}" height="35" src="{{data.logosmall}}" > </ion-title>
+    </ion-navbar>
+</ion-header>
+<!--Fist Screen Content-->
+<ion-content>
+
+    
+    <div *ngIf="data.background!=null"  background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
+        <div class="ionic-descript" text-center>
+            <img src="{{data.logo}}" alt="Artist1">
+        </div>
+    </div>
+</ion-content>
