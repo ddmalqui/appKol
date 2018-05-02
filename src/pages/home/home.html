@@ -3,17 +3,23 @@
     <ion-navbar>
         <button ion-button menuToggle>
       <ion-icon class="icon-menu" name="menu"></ion-icon>
-        </button>
-        <ion-title> <img alt="{{data.logosmall}}" height="35" src="{{data.logosmall}}" > </ion-title>
+    </button>
     </ion-navbar>
 </ion-header>
+
 <!--Fist Screen Content-->
 <ion-content>
-
-    
     <div *ngIf="data.background!=null"  background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
-        <div class="ionic-descript" text-center>
-            <img src="{{data.logo}}" alt="Artist1">
+        <div>
+            <img class="logo-home" src="{{data.logo}}" />
         </div>
+         <div class="ionic-descript" text-center>
+            <h2 item-title>{{data.title}}</h2>
+            <h2 item-title>{{data.subtitle}}</h2>
+            <p item-subtitle>{{data.subtitle2}}</p>
+        </div>
+        <a [href]="data.link">
+            {{data.description}}
+        </a>
     </div>
 </ion-content>

@@ -118,7 +118,6 @@ export class ItemsPage {
     };
 
     this.componentName = navParams.get('componentName');
-    console.log(navParams.get('componentName'));
     this.service = this.listServices[this.componentName];
 
     if (this.service) {

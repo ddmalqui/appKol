@@ -43,8 +43,7 @@ export class MenuService implements IService {
     return {
       "background": "assets/images/background/16.jpg",
       "image": "assets/images/logo/login-3.png",
-      "title": "Ionic3 UI Theme - Blue Light",
-      "logo": "assets/images/logo/logo-s.png",
+      "title": "Ionic3 UI Theme - Blue Light"
     };
   };
 

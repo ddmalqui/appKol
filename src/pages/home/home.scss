@@ -1,13 +1,24 @@
 /*  #Style First Screen (Home)
 ================================================*/
-
+.scroll-content{
+   // margin-top: 0px !important;
+}
+.logo-home{
+    margin: 45px auto;
+}
+ ion-header{
+     background-image: none !important;
+}
+.header-md::after{
+    background-image: none !important;
+}
 page-home {
     [default-background] {
         height: 100%;
         width: 100%;
         display: table;
         .ionic-descript {
-            display: table-cell;
+            //display: table-cell;
             vertical-align: middle;
             h2[item-title] {
                 margin: 0;

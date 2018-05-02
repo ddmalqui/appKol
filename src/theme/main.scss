@@ -65,12 +65,12 @@ $text-font-size: 12px;
 ================================================*/
 $palettes: (
     mainColors: ( // Also used for backgrounds.
-        primary:   #FF9933, // Used for toolbars
+        primary:   #0090d0, // Used for toolbars
         secondary:  #f7f7f7, // Used for various small elements
-        secondary-first:  #FFCC66, // Used for gradient
-        accent:   #feffff, //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
-        accent-first: #FFFF99,
-        accent-other: #FFCC66, // Used for gradient
+        secondary-first:  #0091D2, // Used for gradient
+        accent:   #ffffff, //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
+        accent-first: #00c0e8,
+        accent-other: #00bee4, // Used for gradient
     ),
 
     textColors: ( // Used for text colors in all screens
@@ -178,9 +178,9 @@ $color-2: theme-colors('mainColors', 'secondary-first');
     }
 
     to {
-      background-color: #FFC120;
-      background-color: -webkit-gradient(linear, right top, left top, from(#FFC120), to(#FFE597));
-      background-color: linear-gradient(to left, #FFC120 0%, #FFE597 100%);
+      background-color: #00bee4;
+      background-color: -webkit-gradient(linear, right top, left top, from(#00bee4), to(#0091d2));
+      background-color: linear-gradient(to left, #00bee4 0%, #0091d2 100%);
     }
   }
 
@@ -713,7 +713,8 @@ $background-color: theme-colors('mainColors', 'secondary');
   $toolbar-ios-button-color: theme-colors('textColors', 'accent-first');
   .toolbar {
     .toolbar-background{
-      @include gradient-accent ($color-1, $color-2);
+      //@include gradient-accent ($color-1, $color-2);
+      background: transparent;
     }
     .toolbar-title {
       text-transform: uppercase;
