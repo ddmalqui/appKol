@@ -13,13 +13,23 @@
         <div>
             <img class="logo-home" src="{{data.logo}}" />
         </div>
-         <div class="ionic-descript" text-center>
-            <h2 item-title>{{data.title}}</h2>
-            <h2 item-title>{{data.subtitle}}</h2>
-            <p item-subtitle>{{data.subtitle2}}</p>
-        </div>
-        <a [href]="data.link">
-            {{data.description}}
-        </a>
+
+    <div class="margin-button-40">
+    <div class="form-item">
+    <button ion-button secondary class="btn-social-home" (click)="createAccountWithGoogle()">
+        <ion-icon name="logo-google"></ion-icon>    
+        <strong>Iniciar sesion con google</strong>
+    </button>
     </div>
+
+    <div class="form-item">
+    <button ion-button secondary class="btn-social-home" (click)="createAccountWithFacebook()">
+        <ion-icon name="logo-facebook"></ion-icon>  
+        <strong>Iniciar sesion con facebook</strong>
+    </button>
+    </div>
+</div>
+
+    </div>
+
 </ion-content>

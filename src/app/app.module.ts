@@ -3,6 +3,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
+import { Authentication } from '../services/authentication';
+
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -20,7 +22,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     declarations: [MyApp],
     providers: [
         BarcodeScanner, StatusBar, SplashScreen,
-        ToastService, LoadingService,
+        ToastService, LoadingService, Authentication,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     ],
     imports: [
