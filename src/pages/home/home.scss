@@ -1,34 +1,13 @@
 /*  #Style First Screen (Home)
 ================================================*/
-.scroll-content{
-   // margin-top: 0px !important;
-}
-.logo-home{
-    margin: 45px auto;
-}
- ion-header{
-     background-image: none !important;
-}
-.header-md::after{
-    background-image: none !important;
-}
-.margin-button-40{
-    margin-top: 40px;
-}
-.button-md{
-background-color: rgba(255, 153, 0, 0.5) !important;
-}
-.btn-social-home{
-    border: 3px solid black;
-    border-radius: 0px 10px 10px 0px;
-}
+
 page-home {
     [default-background] {
         height: 100%;
         width: 100%;
         display: table;
         .ionic-descript {
-            //display: table-cell;
+            display: table-cell;
             vertical-align: middle;
             h2[item-title] {
                 margin: 0;
@@ -37,13 +16,13 @@ page-home {
               color: theme-colors('textColors', 'accent') !important;
             }
         }
-        // a {
-        //     color: theme-colors('textColors', 'accent') !important;
-        //     text-decoration: underline;
-        //     visibility: visible !important;
-        //     position: absolute;
-        //     bottom: 25px;
-        //     left: 25px;
-        // }
+        a {
+            color: theme-colors('textColors', 'accent') !important;
+            text-decoration: underline;
+            visibility: visible !important;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+        }
     }
 }

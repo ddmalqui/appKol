@@ -713,8 +713,7 @@ $background-color: theme-colors('mainColors', 'secondary');
   $toolbar-ios-button-color: theme-colors('textColors', 'accent-first');
   .toolbar {
     .toolbar-background{
-      //@include gradient-accent ($color-1, $color-2);
-      background: transparent;
+      @include gradient-accent ($color-1, $color-2);
     }
     .toolbar-title {
       text-transform: uppercase;

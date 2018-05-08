@@ -4,32 +4,22 @@
         <button ion-button menuToggle>
       <ion-icon class="icon-menu" name="menu"></ion-icon>
     </button>
+        <ion-title>{{data.toolbarTitle}}</ion-title>
     </ion-navbar>
 </ion-header>
-
 <!--Fist Screen Content-->
 <ion-content>
+    <google-card-layout-2 [data]="params.data | async" [events]="params.events">
+    </google-card-layout-2>
+
     <div *ngIf="data.background!=null"  background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
-        <div>
-            <img class="logo-home" src="{{data.logo}}" />
+        <div class="ionic-descript" text-center>
+            <h2 item-title>{{data.title}}</h2>
+            <h2 item-title>{{data.subtitle}}</h2>
+            <p item-subtitle>{{data.subtitle2}}</p>
         </div>
-
-    <div class="margin-button-40">
-    <div class="form-item">
-    <button ion-button secondary class="btn-social-home" (click)="createAccountWithGoogle()">
-        <ion-icon name="logo-google"></ion-icon>    
-        <strong>Iniciar sesion con google</strong>
-    </button>
+        <a [href]="data.link">
+            {{data.description}}
+        </a>
     </div>
-
-    <div class="form-item">
-    <button ion-button secondary class="btn-social-home" (click)="createAccountWithFacebook()">
-        <ion-icon name="logo-facebook"></ion-icon>  
-        <strong>Iniciar sesion con facebook</strong>
-    </button>
-    </div>
-</div>
-
-    </div>
-
 </ion-content>

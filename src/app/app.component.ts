@@ -43,7 +43,6 @@ export class MyApp {
         if (AppSettings.SHOW_START_WIZARD) {
           this.presentProfileModal();
         }
-        console.log(auth.token);
     }
 
     presentProfileModal() {
@@ -84,9 +83,5 @@ export class MyApp {
 
   getServiceForPage(value: string): IService {
     return null;
-  }
-
-   logOut(){
-    this.auth.logOut();
   }
 }

@@ -233,9 +233,6 @@ export class ItemsPage {
         componentName: page.theme
       });
     } else {
-      console.log(this.componentName);
-      console.log(this.service);
-      console.log(page);
       this.navCtrl.push(this.selectPageForOpen(this.componentName), {
         service: this.service,
         page: page
