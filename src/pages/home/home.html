@@ -9,9 +9,6 @@
 </ion-header>
 <!--Fist Screen Content-->
 <ion-content>
-    <google-card-layout-2 [data]="params.data | async" [events]="params.events">
-    </google-card-layout-2>
-
     <div *ngIf="data.background!=null"  background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
         <div class="ionic-descript" text-center>
             <h2 item-title>{{data.title}}</h2>

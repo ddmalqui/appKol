@@ -9,9 +9,6 @@ import { AppSettings } from '../services/app-settings';
 
 import { IService } from '../services/IService';
 
-import { Authentication } from '../services/authentication';
-
-
 @Component({
     templateUrl: 'app.html',
     providers: [MenuService]
@@ -31,8 +28,7 @@ export class MyApp {
         private statusBar: StatusBar,
         public menu: MenuController,
         private menuService: MenuService,
-        public modalCtrl: ModalController,
-        public auth : Authentication) {
+        public modalCtrl: ModalController) {
         this.initializeApp();
 
         this.pages = menuService.getAllThemes();

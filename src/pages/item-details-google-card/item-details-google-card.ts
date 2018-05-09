@@ -17,7 +17,6 @@ export class ItemDetailsPageGoogleCard {
         // If we navigated to this page, we will have an item available as a nav param
         this.page = navParams.get('page');
         this.service = navParams.get('service');
-        console.log(this.page);
         if (this.service) {
             this.params = this.service.prepareParams(this.page, navCtrl);
             this.params.data = this.service.load(this.page);

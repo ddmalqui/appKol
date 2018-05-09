@@ -16,14 +16,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
-import { Authentication } from '../services/authentication';
-
-
 @NgModule({
     declarations: [MyApp],
     providers: [
         BarcodeScanner, StatusBar, SplashScreen,
-        ToastService, LoadingService, Authentication,
+        ToastService, LoadingService,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     ],
     imports: [
