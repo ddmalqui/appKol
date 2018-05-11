@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController,  NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomeService } from '../../services/home-service';
+import { ListViewGoogleCardsService } from '../../services/list-view-google-card-service';
 import { IService } from '../../services/IService';
 
 
@@ -8,24 +9,27 @@ import { IService } from '../../services/IService';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [HomeService]
+  providers: [HomeService,ListViewGoogleCardsService]
 
 })
 export class HomePage {
 
-  data: any = {};
   page: any;
-  serviceIO: IService;
-  params: any = {};
+  service: IService;
+  data: any = {};
 
-  constructor(public navCtrl: NavController, public service: HomeService, navParams: NavParams) { 
-  	this.page = navParams.get('page');
-  	console.log(this.page);
-    service.load().subscribe(snapshot => {
-      this.data = snapshot;
-    });
-  }
+  constructor(public navCtrl: NavController, public serviceHome: HomeService,
+  	public googlecardService : ListViewGoogleCardsService, navParams: NavParams) { 
+    	this.page = navParams.get('page');
+        console.log('details');
+        console.log(this.page);
+        this.service = navParams.get('service');
+       console.log('service');
+       console.log(this.service);
+       this.data = googlecardService.getDataForLayout2();
+        //this.params = this.service.prepareParams(this.page, navCtrl);
+          //this.params.data = this.service.load(this.page);
+    	//console.log(this.data);
 
-  
-
+}
 }

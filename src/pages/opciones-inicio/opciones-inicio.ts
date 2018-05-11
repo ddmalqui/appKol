@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-
-/**
- * Generated class for the OpcionesInicioPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IService } from '../../services/IService';
 
 @IonicPage()
 @Component({
@@ -16,7 +10,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class OpcionesInicioPage {
 
+	page: any;
+    service: IService;
+    params: any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  	 // this.page = navParams.get('page');
+    //     this.service = navParams.get('service');
+    //     if (this.service) {
+    //         this.params = this.service.prepareParams(this.page, navCtrl);
+    //         this.params.data = this.service.load(this.page);
+    //     } else {
+    //         navCtrl.setRoot("HomePage");
+    //     }	
+        
   }
 
   ionViewDidLoad() {
