@@ -17,18 +17,21 @@ export class HomePage {
   page: any;
   service: IService;
   data: any = {};
+  params: any = {};
 
   constructor(public navCtrl: NavController, public serviceHome: HomeService,
   	public googlecardService : ListViewGoogleCardsService, navParams: NavParams) { 
-    	this.page = navParams.get('page');
-        console.log('details');
-        console.log(this.page);
-        this.service = navParams.get('service');
-       console.log('service');
-       console.log(this.service);
-       this.data = googlecardService.getDataForLayout2();
+       
+      this.data = googlecardService.getDataForLayout2();
+      this.page =  {
+                      "title": "Styled cards 2",
+                      "theme": "layout2"
+                    }
+       this.params = googlecardService.prepareParams(this.page); 
+       this.params.data = googlecardService.load(this.page);
+       
         //this.params = this.service.prepareParams(this.page, navCtrl);
-          //this.params.data = this.service.load(this.page);
+          //this.params.data = googlecardService.load(this.page);
     	//console.log(this.data);
 
 }

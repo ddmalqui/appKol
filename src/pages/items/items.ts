@@ -118,7 +118,9 @@ export class ItemsPage {
     };
 
     this.componentName = navParams.get('componentName');
+    console.log(this.componentName + ' googleCards'); 
     this.service = this.listServices[this.componentName];
+    console.log(this.service + ' this.service'); 
 
     if (this.service) {
       this.pages = this.service.getAllThemes();

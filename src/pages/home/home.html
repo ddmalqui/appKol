@@ -1,14 +1,12 @@
-<!--Fist Screen-->
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
-      <ion-icon class="icon-menu" name="menu"></ion-icon>
+      <ion-icon name="menu"></ion-icon>
     </button>
+        <ion-title text-left>{{params.title}}</ion-title>
     </ion-navbar>
 </ion-header>
-<!--Fist Screen Content-->
-<ion-content>
-        <google-card-layout-2>
+<!--Content-->
+
+<google-card-layout-2 *ngIf="params.googleCardsLayout2" [data]="params.data | async" [events]="params.events">
 </google-card-layout-2>
-        
-</ion-content>
