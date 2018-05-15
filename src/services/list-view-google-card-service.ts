@@ -125,29 +125,29 @@ export class ListViewGoogleCardsService implements IService {
             "items": [
                 {
                     "id": 1,
-                    "title": "Card Title 1",
-                    "titleHeader": "Lorem Ipsum 1",
+                    "title": "Personalizate",
+                    "titleHeader": "Personaliza tu funda",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
-                    "image": "assets/images/background/1.jpg",
-                    "button": "EXPLORE",
-                    "shareButton": "SHARE"
+                    "image": "assets/images/background/personalizacion.jpg",
+                    "button": "Subir Foto",
+                    "shareButton": "Saber mas"
                 },
                 {
                     "id": 2,
-                    "title": "Card Title 2",
-                    "titleHeader": "Lorem Ipsum 2",
+                    "title": "Escucha de la mojor forma",
+                    "titleHeader": "Musica",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
-                    "image": "assets/images/background/2.jpg",
+                    "image": "assets/images/background/musica.jpg",
                     "button": "EXPLORE",
                     "shareButton": "SHARE"
                 },
                 {
                     "id": 3,
-                    "title": "Card Title 3",
-                    "titleHeader": "Lorem Ipsum 3",
+                    "title": "Desde cables a memoria",
+                    "titleHeader": "Todo",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
-                    "image": "assets/images/background/5.jpg",
-                    "button": "EXPLORE",
+                    "image": "assets/images/background/dispositivos.jpg",
+                    "button": "Lista Completa",
                     "shareButton": "SHARE"
                 },
                 {
@@ -161,12 +161,11 @@ export class ListViewGoogleCardsService implements IService {
                 },
                 {
                     "id": 5,
-                    "title": "Card Title 5",
-                    "titleHeader": "Lorem Ipsum 5",
+                    "title": "Sucursales",
+                    "titleHeader": "7 locales ...",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
-                    "image": "assets/images/background/1.jpg",
-                    "button": "EXPLORE",
-                    "shareButton": "SHARE"
+                    "image": "assets/images/background/7locales.jpg",
+                    "shareButton": "Contactarme"
                 }
             ]
         };
@@ -256,6 +255,9 @@ export class ListViewGoogleCardsService implements IService {
             },
             'onFab': function (item: any) {
                   that.toastCtrl.presentToast("Fab");
+            },
+            'goToMaps': function (item: any) {
+                  that.toastCtrl.presentToast("Contact");
             },
         };
     };

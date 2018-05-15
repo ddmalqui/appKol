@@ -63,25 +63,34 @@ $text-font-size: 12px;
 
 /*  #Global Colors
 ================================================*/
+/*Cambio de color para Kol*/
+
+//#00bee4 to #eb984e
+//#0091d2 to #e59866
+//#0090d0 to #873600
+//#00c0e8 to #d35400
+
+
+
 $palettes: (
     mainColors: ( // Also used for backgrounds.
-        primary:   #0090d0, // Used for toolbars
+        primary:   #873600, // Used for toolbars
         secondary:  #f7f7f7, // Used for various small elements
-        secondary-first:  #0091D2, // Used for gradient
+        secondary-first:  #e59866, // Used for gradient
         accent:   #ffffff, //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
-        accent-first: #00c0e8,
-        accent-other: #00bee4, // Used for gradient
+        accent-first: #d35400,
+        accent-other: #eb984e, // Used for gradient
     ),
 
     textColors: ( // Used for text colors in all screens
-        primary: #00c0e8, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
-        secondary: #0090d0, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
+        primary: #d35400, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
+        secondary: #873600, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
         accent:   #455B65, // Used for text colors in: header-title, header-subtitle
         accent-first: #ffffff,
     ),
     blendModes: ( // Used for blend modes
         primary:  #ffffff,
-        secondary: #0090d0
+        secondary: #873600
     )
 );
 
@@ -178,9 +187,9 @@ $color-2: theme-colors('mainColors', 'secondary-first');
     }
 
     to {
-      background-color: #00bee4;
-      background-color: -webkit-gradient(linear, right top, left top, from(#00bee4), to(#0091d2));
-      background-color: linear-gradient(to left, #00bee4 0%, #0091d2 100%);
+      background-color: #eb984e;
+      background-color: -webkit-gradient(linear, right top, left top, from(#eb984e), to(#e59866));
+      background-color: linear-gradient(to left, #eb984e 0%, #e59866 100%);
     }
   }
 
