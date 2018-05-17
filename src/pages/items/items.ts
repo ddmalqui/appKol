@@ -229,10 +229,18 @@ export class ItemsPage {
 
   navigation(page: any) {
     if (page.listView) {
+      console.log('ItemsPage');
+      console.log(ItemsPage);
+      console.log('page.theme');
+      console.log(page.theme);
       this.navCtrl.push(ItemsPage, {
         componentName: page.theme
       });
     } else {
+      console.log('this.selectPageForOpen(this.componentName)');
+      console.log(this.selectPageForOpen(this.componentName));
+      console.log('page');
+      console.log(page);
       this.navCtrl.push(this.selectPageForOpen(this.componentName), {
         service: this.service,
         page: page

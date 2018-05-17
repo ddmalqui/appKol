@@ -2,9 +2,11 @@ import { IService } from './IService';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AppSettings } from './app-settings'
-import { ToastService } from './toast-service'
-import { LoadingService } from './loading-service'
+import { AppSettings } from './app-settings';
+import { ToastService } from './toast-service';
+import { LoadingService } from './loading-service';
+
+
 
 @Injectable()
 export class ListViewGoogleCardsService implements IService {

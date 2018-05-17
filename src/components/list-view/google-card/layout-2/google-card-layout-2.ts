@@ -1,5 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { IonicPage, Content, FabButton } from 'ionic-angular';
+import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
+import { MapsService } from '../../../../services/maps-service';
+
 
 @IonicPage()
 @Component({
@@ -15,7 +17,7 @@ export class GoogleCardLayout2 {
     fabButton: FabButton;
 
     slider = {};
-    constructor() { }
+    constructor(public navCtrl: NavController) { }
 
     slideHasChanged(slider, index): void {
         this.slider[index] = slider;
@@ -32,6 +34,19 @@ export class GoogleCardLayout2 {
         if (this.slider[index]) {
             this.slider[index].slidePrev(300);
         }
+    }
+
+    gotoPage(){
+
+        let page =  {
+                      "title": "Full Screen View",
+                      "theme": "layout3"
+                    }
+
+ this.navCtrl.push('ItemDetailsPageMaps', {
+        service: MapsService,
+        page: page
+      });
     }
 
     onEvent(event: string, item: any, e: any) {
