@@ -1,6 +1,8 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
 import { MapsService } from '../../../../services/maps-service';
+import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
+
 
 
 @IonicPage()
@@ -37,16 +39,7 @@ export class GoogleCardLayout2 {
     }
 
     gotoPage(){
-
-        let page =  {
-                      "title": "Full Screen View",
-                      "theme": "layout3"
-                    }
-
- this.navCtrl.push('ItemDetailsPageMaps', {
-        service: MapsService,
-        page: page
-      });
+ this.navCtrl.push('MapsLocalesPage');
     }
 
     onEvent(event: string, item: any, e: any) {
