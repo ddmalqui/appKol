@@ -167,7 +167,7 @@ export class ListViewGoogleCardsService implements IService {
                     "titleHeader": "7 locales ...",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
                     "image": "assets/images/background/7locales.jpg",
-                    "shareButton": "Contactarme"
+                    "shareButton": "Buscar Local"
                 }
             ]
         };
@@ -241,7 +241,7 @@ export class ListViewGoogleCardsService implements IService {
         var that = this;
         return {
             'onItemClick': function (item: any) {
-                  that.toastCtrl.presentToast(item);
+                  //that.toastCtrl.presentToast(item);
             },
             'onExplore': function (item: any) {
                   that.toastCtrl.presentToast("Explore");

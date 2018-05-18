@@ -38,8 +38,8 @@ export class GoogleCardLayout2 {
         }
     }
 
-    gotoPage(){
- this.navCtrl.push('MapsLocalesPage');
+    goToPageMapsLocales(){
+         this.navCtrl.push('MapsLocalesPage');
     }
 
     onEvent(event: string, item: any, e: any) {
