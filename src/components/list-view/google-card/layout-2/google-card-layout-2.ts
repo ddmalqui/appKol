@@ -2,8 +2,7 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
 import { MapsService } from '../../../../services/maps-service';
 import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
-
-
+import { BuscarProductoPage } from '../../../../pages/buscar-producto/buscar-producto';
 
 @IonicPage()
 @Component({
@@ -38,8 +37,8 @@ export class GoogleCardLayout2 {
         }
     }
 
-    goToPageMapsLocales(){
-         this.navCtrl.push('MapsLocalesPage');
+    goToPage(page : string){
+         this.navCtrl.push(page);
     }
 
     onEvent(event: string, item: any, e: any) {

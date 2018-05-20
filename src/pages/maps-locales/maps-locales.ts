@@ -17,7 +17,7 @@ import { MapsService } from '../../services/maps-service';
   providers: [MapsService]
 })
 export class MapsLocalesPage {
-
+ 
 	page: any;
   	data: any = {};
   	params: any = {};
@@ -25,13 +25,14 @@ export class MapsLocalesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, 
   	public MapsService : MapsService) {
   	
-  	 this.data = MapsService.getDataForLayout3();
-      this.page =  {
-                      "title": "Full Screen View",
+  	    this.data = MapsService.getDataForLayout3();
+        this.page =  {
+                      "title": "Field + header 2", 
                       "theme": "layout3"
                     }
-       this.params = MapsService.prepareParams(this.page); 
-       this.params.data = MapsService.load(this.page);
+         this.params = MapsService.prepareParams(this.page); 
+          console.log(this.data);
+         this.params.data = MapsService.load(this.page);
   }
 
   ionViewDidLoad() {

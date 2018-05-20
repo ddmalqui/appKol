@@ -145,12 +145,12 @@ export class ListViewGoogleCardsService implements IService {
                 },
                 {
                     "id": 3,
-                    "title": "Desde cables a memoria",
+                    "title": "Todo para tu celular",
                     "titleHeader": "Todo",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
                     "image": "assets/images/background/dispositivos.jpg",
-                    "button": "Lista Completa",
-                    "shareButton": "SHARE"
+                    "shareButton": "BUSCAR PRODUCTO",
+                    "goToPage":"BuscarProductoPage"
                 },
                 {
                     "id": 4,
@@ -167,7 +167,8 @@ export class ListViewGoogleCardsService implements IService {
                     "titleHeader": "7 locales ...",
                     "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
                     "image": "assets/images/background/7locales.jpg",
-                    "shareButton": "Buscar Local"
+                    "shareButton": "Buscar Local",
+                    "goToPage":"MapsLocalesPage"
                 }
             ]
         };

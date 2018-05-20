@@ -152,59 +152,60 @@ export class SearchBarService implements IService {
             "items": [
                 {
                     "id": 1,
-                    "title": "Monument walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Cable HDMI-HDMI",
+                    "description": "1 Metro reforzado",
+                    "price": "$200",
+                    "icon": "icon-map-marker-radius",
+                    "img": "assets/images/productos/cables/Cable-HDMI-1-metro.png"
                 },
                 {
                     "id": 2,
-                    "title": "River walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Cable 3.5-3.5",
+                    "description": "Machos - 2M",
+                    "price": "$120",
+                    "img": "assets/images/productos/cables/cable35-35.png"
                 },
                 {
                     "id": 3,
-                    "title": "City walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Router TPLink",
+                    "description": "Antena Doble",
+                    "price": "$760",
+                    "img": "assets/images/productos/wifi/router.jpg"
                 },
                 {
                     "id": 4,
-                    "title": "Park walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Amplificador WIFI",
+                    "description": "amplifica senal",
+                    "price": "$500",
+                    "img": "assets/images/productos/wifi/amplificadorWifi.jpg"
                 },
                 {
                     "id": 5,
-                    "title": "Vilage walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "joystick Play 4",
+                    "description": "Original",
+                    "price": "$400",
+                    "img": "assets/images/productos/ps/joystickPS4.jpg"
                 },
                 {
                     "id": 6,
-                    "title": "Lake walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "joystick Play 3",
+                    "description": "Replica",
+                    "price": "$300",
+                    "img": "assets/images/productos/ps/joystickPS4Replica.jpg"
                 },
                 {
                     "id": 7,
-                    "title": "Castle walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Tranasmisor FM",
+                    "description": "con Bluetooth",
+                    "price": "$123",
+                    "img": "assets/images/productos/transmisorFM.jpg"
                 },
                 {
                     "id": 8,
-                    "title": "Beach walk tour",
-                    "description": "3:30min walking tour",
-                    "price": "123$",
-                    "icon": "icon-map-marker-radius"
+                    "title": "Ojo de pez",
+                    "description": "3 focos",
+                    "price": "$150",
+                    "img": "assets/images/productos/ojodePez.jpg"
                 }
             ]
         }
@@ -214,10 +215,10 @@ export class SearchBarService implements IService {
         var that = this;
         return {
             'onTextChange': function (text: any) {
-                  that.toastCtrl.presentToast(text);
+                 // that.toastCtrl.presentToast(text);
             },
             'onItemClick': function (item: any) {
-                  that.toastCtrl.presentToast(item.title);
+                 // that.toastCtrl.presentToast(item.title);
             }
         };
     };

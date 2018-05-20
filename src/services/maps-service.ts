@@ -40,7 +40,7 @@ export class MapsService implements IService {
             "titleDescription": "Art Boulevard, New York, USA",
             "reviews": "4.12 (78 reviews)",
             "contentTitle": "In short",
-            "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus semper elit platea; Velit aptent euismod pede euismod facilisis? In ultrices venenatis mauris. Consequat gravida pretium ligula lectus; Lacus natoque elit elit: Imperdiet cursus fermentum suspendisse; Cum iaculis venenatis!",
+            "contentDescription": "Somos una empresa ...",
             "iconLoacation": "icon-map-marker-radius",
             "iconLoacationText": "Design Street, New York, USA",
             "iconWatch": "icon-alarm",
@@ -90,27 +90,45 @@ export class MapsService implements IService {
 
     getDataForLayout2 = (): any => {
         return {
+            "locales": [
+            {//Shopping - santa fe
+                "lat": -31.651611,
+                "lng": -60.701190,
+            },
+            {// galeria Colonial
+                "lat": -31.649196, 
+                "lng": -60.708748,
+            },//all -31.651024, -60.707883
+            {
+               "lat": -31.651024, 
+               "lng": -60.707883,
+            },//Falucho
+            {
+               "lat": -31.648429, 
+               "lng": -60.707047,
+            } 
+            ],
             "iconLike": "icon-thumb-up",
             "iconFavorite": "icon-heart",
             "iconShare": "icon-share-variant",
-            "title": "Creative Studio Form",
+            "title": "Kol Accesorios",
             "titleDescription": "Design & Development agency",
-            "contentTitle": "About us",
-            "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus semper elit platea; Velit aptent euismod pede euismod facilisis? In ultrices venenatis mauris. Consequat gravida pretium ligula lectus; Lacus natoque elit elit: Imperdiet cursus fermentum suspendisse; Cum iaculis venenatis!",
+            "contentTitle": "Sobre Nosotros",
+            "contentDescription": "Kol nace hace ya 10 anos ..",
             "iconLoacation": "icon-map-marker-radius",
-            "iconLoacationText": "Design Street, New York, USA",
+            "iconLoacationText": "Santa Fe, ARGENTINA",
             "iconWatch": "icon-alarm",
-            "iconWatchText": "8:00 to 16:00 working days",
+            "iconWatchText": "Lunes a Sabado de 8:30hs a 12:00hs y de 16.30hs a 20:30hs",
             "iconPhone": "icon-phone",
-            "iconPhoneText": "333 222 111",
+            "iconPhoneText": "034256543",
             "iconEarth": "icon-earth",
-            "iconEarthText": "www.csform.com",
+            "iconEarthText": "www.kolaccesorios.com",
             "iconEmail": "icon-email-outline",
-            "iconEmailText": "dev@csform.com",
-            "titleMap": "Here we are :",
+            "iconEmailText": "kolaccesorios@gmail.com",
+            "titleMap": "Estamos en :",
             "map": {
-                "lat": 40.712562,
-                "lng": -74.005911,
+                "lat":  -31.650677,
+                "lng":  -60.7039967,
                 "zoom": 15,
                 "mapTypeControl": true,
                 "streetViewControl": true
@@ -121,12 +139,30 @@ export class MapsService implements IService {
     getDataForLayout3 = (): any => {
         return {
             "map": {
-                "lat": 40.712562,
-                "lng": -74.005911,
+                "lat": -31.650677,
+                "lng": -60.7039967,
                 "zoom": 15,
                 "mapTypeControl": true,
                 "streetViewControl": true
-            }
+            },
+            "locales": [
+            {//Shopping - santa fe
+                "lat": -31.651611,
+                "lng": -60.701190,
+            },
+            {// galeria Colonial
+                "lat": -31.649196, 
+                "lng": -60.708748,
+            },//all -31.651024, -60.707883
+            {
+               "lat": -31.651024, 
+               "lng": -60.707883,
+            },//Falucho
+            {
+               "lat": -31.648429, 
+               "lng": -60.707047,
+            } 
+            ],
         };
     };
 

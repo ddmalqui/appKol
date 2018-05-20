@@ -1,4 +1,5 @@
 <!-- Theme Search bars Field + header -->
+
 <ion-grid no-padding>
     <ion-row *ngIf="data != null">
         <!-- Header -->
@@ -13,9 +14,7 @@
         <ion-col col-12>
             <ion-list no-margin>
                 <ion-item no-lines *ngFor="let item of data.items;" (click)="onEvent('onItemClick', item)">
-                    <ion-icon icon-medium item-start>
-                        <i class="icon {{item.icon}}"></i>
-                    </ion-icon>
+                        <img class="productos-search" *ngIf="item.img != null" [src]="item.img" />
                     <h2 item-title>{{item.title}}</h2>
                     <h3 item-subtitle>{{item.description}}</h3>
                     <item-content item-end>

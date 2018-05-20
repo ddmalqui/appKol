@@ -1,10 +1,10 @@
 <!--
-  Generated template for the MapsLocalesPage page.
+  Generated template for the BuscarProductoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<!--Map component-->
+
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
@@ -14,5 +14,9 @@
     </ion-navbar>
 </ion-header>
 
-<maps-layout-2 *ngIf="params.mapsLayout2" [data]="params.data | async" [events]="params.events">
-</maps-layout-2>
+ 
+
+<ion-content>
+<search-bar-layout-3 *ngIf="params.searchBarsLayout3" [data]="params.data | async" [events]="params.events">
+    </search-bar-layout-3>
+</ion-content>
