@@ -27,11 +27,10 @@ export class MapsLocalesPage {
   	
   	    this.data = MapsService.getDataForLayout3();
         this.page =  {
-                      "title": "Field + header 2", 
+                      "title": "HOLA", 
                       "theme": "layout3"
                     }
          this.params = MapsService.prepareParams(this.page); 
-          console.log(this.data);
          this.params.data = MapsService.load(this.page);
   }
 

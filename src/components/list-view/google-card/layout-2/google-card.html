@@ -17,7 +17,7 @@
                     <button *ngIf="item.shareButton != null" ion-button margin button-clear-outline round outline medium float-left (click)="goToPage(item.goToPage)">
             {{item.shareButton}}
           </button>
-                    <button *ngIf="item.button != null" ion-button margin-bottom margin-top button-clear-outline round outline medium float-left (click)="gotoPage()">
+                    <button *ngIf="item.button != null" ion-button margin-bottom margin-top button-clear-outline round outline medium float-left (click)="goToPage(item.goToPage)">
             {{item.button}}
           </button>
                 </ion-card>
