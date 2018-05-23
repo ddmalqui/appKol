@@ -2,6 +2,22 @@
 <ion-content has-header>
     <ion-grid no-padding *ngIf="data != null">
         <ion-row>
+
+            <ion-col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4>
+                <ion-card>
+                    <div card-content>
+                        <img images-filter src="assets/images/background/7locales.jpg" />
+                        <div card-title>hola</div>
+                        <div card-subtitle>hola</div>
+                        <div card-subtitle>hola</div>
+                        <div card-subtitle>hola</div>
+                        <div card-subtitle>hola</div>
+                        <div card-subtitle>hola</div>
+                        <div card-subtitle>hola</div>
+                    </div>
+                </ion-card>
+            </ion-col>
+
             <ion-col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 *ngFor="let item of data.items;let i = index">
                 <ion-card text-left (click)="onEvent('onItemClick', item.title, $event)">
                     <div card-image>
