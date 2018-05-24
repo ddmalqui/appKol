@@ -28,7 +28,7 @@ export class MapsLocalesPage {
   	    this.data = MapsService.getDataForLayout3();
         this.page =  {
                       "title": "HOLA", 
-                      "theme": "layout3"
+                      "theme": "layout2"
                     }
          this.params = MapsService.prepareParams(this.page); 
          this.params.data = MapsService.load(this.page);

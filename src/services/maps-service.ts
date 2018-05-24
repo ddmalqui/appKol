@@ -164,7 +164,7 @@ export class MapsService implements IService {
             } 
             ],
         };
-    };
+    }
 
     getEventsForTheme = (menuItem: any): any => {
         var that = this;

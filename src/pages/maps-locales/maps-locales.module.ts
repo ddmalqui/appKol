@@ -9,7 +9,7 @@ import { MapsLayout2Module } from '../../components/maps/layout-2/maps-layout-2.
     MapsLocalesPage,
   ],
   imports: [
-    IonicPageModule.forChild(MapsLocalesPage),MapsLayout2Module,
+    IonicPageModule.forChild(MapsLocalesPage),MapsLayout2Module
   ],
 })
 export class MapsLocalesPageModule {}

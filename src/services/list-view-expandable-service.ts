@@ -515,6 +515,7 @@ export class ListViewExpandableService implements IService {
         var that = this;
         that.loadingService.show();
         if (AppSettings.IS_FIREBASE_ENABLED) {
+            console.log('')
             return new Observable(observer => {
                 console.log(item.theme)
                 this.af

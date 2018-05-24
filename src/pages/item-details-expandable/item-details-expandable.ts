@@ -16,6 +16,10 @@ export class ItemDetailsPageExpandable {
         // If we navigated to this page, we will have an item available as a nav param
         this.page = navParams.get('page');
         this.service = navParams.get('service');
+        console.log('this.page: ' + this.page);
+        console.log(this.page);
+        console.log('this.service: ' + this.service);
+        console.log(this.service);
         if (this.service) {
             this.params = this.service.prepareParams(this.page, navCtrl);
             this.params.data = this.service.load(this.page);
