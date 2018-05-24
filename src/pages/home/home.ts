@@ -34,7 +34,7 @@ export class HomePage {
                       "theme": "layout2"
                     }
        this.params = googlecardService.prepareParams(this.page); 
-       this.params.data = googlecardService.load(this.page);
+      // this.params.data = googlecardService.load(this.page);
       
 
        this.dataExpandableService = ExpandableService.getDataForLayout2();
@@ -42,7 +42,7 @@ export class HomePage {
                         "title": "Full image with CTA", "theme": "layout2"
                      }
         this.paramsExpandableService = ExpandableService.prepareParams(this.pageExpandableService); 
-       // this.paramsExpandableService.data = ExpandableService.load(this.pageExpandableService);
+        this.paramsExpandableService.data = ExpandableService.load(this.pageExpandableService);
       
 
         //this.params = this.service.prepareParams(this.page, navCtrl);
