@@ -374,6 +374,7 @@ export class ListViewExpandableService implements IService {
                     "title": "Product 5",
                     "backgroundImage": "assets/images/home/iphone.jpg",
                     "button": "",
+                    "gotoPage":"IphonePage",
                     "icon": "logo-apple",
                     "items": [
                         "PAY WITH PAYPAL",

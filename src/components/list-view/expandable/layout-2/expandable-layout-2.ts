@@ -2,6 +2,7 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
 import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
 import { BuscarProductoPage } from '../../../../pages/buscar-producto/buscar-producto';
+import {IphonePage} from '../../../../pages/iphone/iphone';
 
 
 

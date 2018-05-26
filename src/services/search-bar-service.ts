@@ -211,6 +211,71 @@ export class SearchBarService implements IService {
         }
     };
 
+    getDataForLayout3iphone = (): any => {
+        return {
+            "headerImage": "assets/images/background/iphone.jpg",
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Cable USB-C to Lightning",
+                    "description": "Cable (2 m)",
+                    "price": "$200",
+                    "icon": "icon-map-marker-radius",
+                    "img": "assets/images/productos/cables/Cable-HDMI-1-metro.png"
+                },
+                {
+                    "id": 2,
+                    "title": "Cable 3.5-3.5",
+                    "description": "Machos - 2M",
+                    "price": "$120",
+                    "img": "assets/images/productos/cables/cable35-35.png"
+                },
+                {
+                    "id": 3,
+                    "title": "Router TPLink",
+                    "description": "Antena Doble",
+                    "price": "$760",
+                    "img": "assets/images/productos/wifi/router.jpg"
+                },
+                {
+                    "id": 4,
+                    "title": "Amplificador WIFI",
+                    "description": "amplifica senal",
+                    "price": "$500",
+                    "img": "assets/images/productos/wifi/amplificadorWifi.jpg"
+                },
+                {
+                    "id": 5,
+                    "title": "joystick Play 4",
+                    "description": "Original",
+                    "price": "$400",
+                    "img": "assets/images/productos/ps/joystickPS4.jpg"
+                },
+                {
+                    "id": 6,
+                    "title": "joystick Play 3",
+                    "description": "Replica",
+                    "price": "$300",
+                    "img": "assets/images/productos/ps/joystickPS4Replica.jpg"
+                },
+                {
+                    "id": 7,
+                    "title": "Tranasmisor FM",
+                    "description": "con Bluetooth",
+                    "price": "$123",
+                    "img": "assets/images/productos/transmisorFM.jpg"
+                },
+                {
+                    "id": 8,
+                    "title": "Ojo de pez",
+                    "description": "3 focos",
+                    "price": "$150",
+                    "img": "assets/images/productos/ojodePez.jpg"
+                }
+            ]
+        }
+    };
+
     getEventsForTheme = (menuItem: any): any => {
         var that = this;
         return {
