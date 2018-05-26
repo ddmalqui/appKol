@@ -3,13 +3,12 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    	<img src="assets/images/header/logo.png">
         <ion-title text-left>{{params.title}}</ion-title>
     </ion-navbar>
 </ion-header>
 <!--Content-->
 
-<!-- <google-card-layout-2 *ngIf="params.googleCardsLayout2" [data]="params.data | async" [events]="params.events">
-</google-card-layout-2> -->
 
 <expandable-layout-2 *ngIf="paramsExpandableService.expandableLayout2" [data]="paramsExpandableService.data | async" [events]="paramsExpandableService.events">
 </expandable-layout-2>

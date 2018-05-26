@@ -1,5 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { IonicPage, Content, FabButton } from 'ionic-angular';
+import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
+import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
+
 
 @IonicPage()
 @Component({
@@ -14,7 +16,7 @@ export class ExpandableLayout2 {
   @ViewChild(FabButton)
   fabButton: FabButton;
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   onEvent(event: string, item: any, e: any) {
     if (e) {
@@ -32,6 +34,11 @@ export class ExpandableLayout2 {
   isGroupShown(group: any) {
     return group.show;
   }
+
+  goToPage(page : string){
+     this.navCtrl.push(page);
+  }
+
 
   ngAfterViewInit() {
     this.content.ionScroll.subscribe((d) => {

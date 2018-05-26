@@ -10,7 +10,11 @@
                             <div class="collapsible-header">
                                 <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
                                     <h2 item-title float-left>{{group.title}}</h2>
-                                    <button ion-button float-right button-clear-outline outline round (click)="toggleGroup(group)">
+                                    <button *ngIf="group.gotoPage != null" ion-button float-right button-clear-outline outline round (click)="goToPage(group.gotoPage)">
+                                        <ion-icon name="{{group.icon}}" *ngIf="group.icon != null"></ion-icon> {{group.button}}
+                                  </button>
+                                  <button *ngIf="group.gotoPage == null" ion-button float-right button-clear-outline outline round (click)="toggleGroup(group)">
+                                        <ion-icon name="{{group.icon}}" *ngIf="group.icon != null"></ion-icon>
                                         {{group.button}}
                                   </button>
                                 </ion-item>

@@ -338,7 +338,7 @@ export class ListViewExpandableService implements IService {
                 {
                     "id": 1,
                     "title": "Product 1",
-                    "backgroundImage": "assets/images/background/22.jpg",
+                    "backgroundImage": "assets/images/home/musica.jpg",
                     "button": "BUY",
                     "items": [
                         "PAY WITH PAYPAL",
@@ -349,7 +349,7 @@ export class ListViewExpandableService implements IService {
                 {
                     "id": 2,
                     "title": "Product 2",
-                    "backgroundImage": "assets/images/background/23.jpg",
+                    "backgroundImage": "assets/images/home/custom2.jpg",
                     "button": "BUY",
                     "items": [
                         "PAY WITH PAYPAL",
@@ -360,19 +360,8 @@ export class ListViewExpandableService implements IService {
                 {
                     "id": 3,
                     "title": "Product 3",
-                    "backgroundImage": "assets/images/background/24.jpg",
-                    "button": "BUY",
-                    "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
-                    ]
-                },
-                {
-                    "id": 4,
-                    "title": "Product 4",
-                    "backgroundImage": "assets/images/background/25.jpg",
-                    "button": "BUY",
+                    "backgroundImage": "assets/images/home/device.jpg",
+                    "button": "PRODUCTOS",
                     "items": [
                         "PAY WITH PAYPAL",
                         "PAY WITH VISA CARD",
@@ -382,8 +371,21 @@ export class ListViewExpandableService implements IService {
                 {
                     "id": 5,
                     "title": "Product 5",
-                    "backgroundImage": "assets/images/background/26.jpg",
-                    "button": "BUY",
+                    "backgroundImage": "assets/images/home/iphone.jpg",
+                    "button": "",
+                    "icon": "logo-apple",
+                    "items": [
+                        "PAY WITH PAYPAL",
+                        "PAY WITH VISA CARD",
+                        "PAY WITH MAESTRO CARD"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "",
+                    "backgroundImage": "assets/images/home/7locales.jpg",
+                    "button": "LOCALES",
+                    "gotoPage":"MapsLocalesPage",
                     "items": [
                         "PAY WITH PAYPAL",
                         "PAY WITH VISA CARD",
@@ -515,7 +517,6 @@ export class ListViewExpandableService implements IService {
         var that = this;
         that.loadingService.show();
         if (AppSettings.IS_FIREBASE_ENABLED) {
-            console.log('')
             return new Observable(observer => {
                 console.log(item.theme)
                 this.af

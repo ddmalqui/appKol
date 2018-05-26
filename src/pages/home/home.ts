@@ -27,17 +27,9 @@ export class HomePage {
   constructor(public navCtrl: NavController, public serviceHome: HomeService,
   	public googlecardService : ListViewGoogleCardsService, ExpandableService : ListViewExpandableService, 
     navParams: NavParams) { 
-       
-      this.data = googlecardService.getDataForLayout2();
-      this.page =  {
-                      "title": "Styled cards 2",
-                      "theme": "layout2"
-                    }
-       this.params = googlecardService.prepareParams(this.page); 
-      // this.params.data = googlecardService.load(this.page);
-      
 
        this.dataExpandableService = ExpandableService.getDataForLayout2();
+       
        this.pageExpandableService =  {
                         "title": "Full image with CTA", "theme": "layout2"
                      }

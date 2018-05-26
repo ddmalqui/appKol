@@ -1,6 +1,11 @@
 /*  #Style Full image with CTA
 ===========================================*/
 expandable-layout-2 {
+
+  .button-inner ion-icon{
+    font-size: xx-large;
+  }
+  
   li {
     list-style-type: none;
     &[margin] {
