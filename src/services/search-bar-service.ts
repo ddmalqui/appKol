@@ -148,7 +148,7 @@ export class SearchBarService implements IService {
 
     getDataForLayout3 = (): any => {
         return {
-            "headerImage": "assets/images/background/9.jpg",
+            "headerImage": "assets/images/background/drone.jpeg",
             "items": [
                 {
                     "id": 1,

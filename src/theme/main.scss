@@ -86,7 +86,7 @@ $palettes: (
         primary: #d35400, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
         secondary: #873600, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
         accent:   #455B65, // Used for text colors in: header-title, header-subtitle
-        accent-first: #ffffff,
+        accent-first: #000000,
     ),
     blendModes: ( // Used for blend modes
         primary:  #ffffff,
@@ -722,7 +722,9 @@ $background-color: theme-colors('mainColors', 'secondary');
   $toolbar-ios-button-color: theme-colors('textColors', 'accent-first');
   .toolbar {
     .toolbar-background{
-      @include gradient-accent ($color-1, $color-2);
+      color: none;
+      //@include gradient-accent ($color-1, $color-2);
+      border-bottom: 1px solid $color-1;
     }
     .toolbar-title {
       text-transform: uppercase;
@@ -788,3 +790,12 @@ $background-color: theme-colors('mainColors', 'secondary');
     color: theme-colors('textColors', 'accent') !important;
   }
 }
+
+// Diego
+.logo-header{
+  max-height:40px !important;
+}
+.logo-header-right{
+  float: right;
+}
+

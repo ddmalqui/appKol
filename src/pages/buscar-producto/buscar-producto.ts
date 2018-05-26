@@ -27,7 +27,7 @@ export class BuscarProductoPage {
 
   		this.data = SearchBarService.getDataForLayout3();
       	this.page =  {
-                      "title": "Full Screen View",
+                      "title": "PRODUCTOS",
                       "theme": "layout3"
                     }
        	this.params = SearchBarService.prepareParams(this.page); 

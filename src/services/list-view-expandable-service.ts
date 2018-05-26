@@ -339,7 +339,7 @@ export class ListViewExpandableService implements IService {
                     "id": 1,
                     "title": "Product 1",
                     "backgroundImage": "assets/images/home/musica.jpg",
-                    "button": "BUY",
+                    "button": "MUSICA",
                     "items": [
                         "PAY WITH PAYPAL",
                         "PAY WITH VISA CARD",
@@ -362,6 +362,7 @@ export class ListViewExpandableService implements IService {
                     "title": "Product 3",
                     "backgroundImage": "assets/images/home/device.jpg",
                     "button": "PRODUCTOS",
+                    "gotoPage":"BuscarProductoPage",
                     "items": [
                         "PAY WITH PAYPAL",
                         "PAY WITH VISA CARD",
