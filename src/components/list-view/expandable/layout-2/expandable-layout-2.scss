@@ -67,4 +67,17 @@ expandable-layout-2 {
       margin: 0;
     }
   }
+
+  .item-accordion-3 {
+    &.active {
+      height: 165px !important;
+    }
+  }
+
+    .item-accordion-2 {
+    &.active {
+      height: 110px !important;
+    }
+  }
+  
 }

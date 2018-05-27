@@ -337,18 +337,29 @@ export class ListViewExpandableService implements IService {
             "items": [
                 {
                     "id": 1,
-                    "title": "Product 1",
+                    "title": "",
                     "backgroundImage": "assets/images/home/musica.jpg",
                     "button": "MUSICA",
+                    "class":"default-button-musica",
+                    //"gotoPage":"BuscarProductoPage",
                     "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
+                        {
+                            "text": "Auriculares",
+                            "go": "AuricularesPage",
+                        },
+                        {
+                            "text": "Parlantes",
+                            "go": "ParlantesPage",
+                        },
+                        {
+                            "text": "Luces",
+                            "go": "LucesPage",
+                        },
                     ]
                 },
                 {
                     "id": 2,
-                    "title": "Product 2",
+                    "title": "",
                     "backgroundImage": "assets/images/home/custom2.jpg",
                     "button": "BUY",
                     "items": [

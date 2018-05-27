@@ -393,6 +393,11 @@ $icon-size:(
   font-weight: 500 !important;
 }
 
+[default-button].default-button-musica {
+  background: #bdc3c7 !important;
+  border-bottom: 2px solid #f8be00 !important;
+}
+
 [button-clear] {
   color: theme-colors('textColors', 'secondary') !important;
   font-size: $h5-font-size !important;

@@ -3,6 +3,9 @@ import { IonicPage, Content, FabButton, NavController } from 'ionic-angular';
 import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
 import { BuscarProductoPage } from '../../../../pages/buscar-producto/buscar-producto';
 import {IphonePage} from '../../../../pages/iphone/iphone';
+import {AuricularesPage} from '../../../../pages/auriculares/auriculares';
+import {ParlantesPage} from '../../../../pages/parlantes/parlantes';
+import {LucesPage} from '../../../../pages/luces/luces';
 
 
 
