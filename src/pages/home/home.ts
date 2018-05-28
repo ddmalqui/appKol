@@ -5,13 +5,14 @@ import { ListViewGoogleCardsService } from '../../services/list-view-google-card
 import { ListViewExpandableService } from '../../services/list-view-expandable-service';
 import { IService } from '../../services/IService';
 
+import { ProfilePage } from '../profile/profile';
+
 
 @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
   providers: [HomeService, ListViewGoogleCardsService, ListViewExpandableService]
-
 })
 export class HomePage {
 
@@ -41,6 +42,10 @@ export class HomePage {
           //this.params.data = googlecardService.load(this.page);
     	//console.log(this.data);
 
+}
+
+gotoPageProfile(){
+  this.navCtrl.push('ProfilePage');
 }
 
 }

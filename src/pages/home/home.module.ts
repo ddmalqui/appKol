@@ -19,8 +19,7 @@ import { ExpandableLayout3Module } from '../../components/list-view/expandable/l
     imports: [
         IonicPageModule.forChild(HomePage),
         GoogleCardLayout1Module, GoogleCardLayout2Module, GoogleCardLayout3Module
-        ,ExpandableLayout1Module,ExpandableLayout2Module,ExpandableLayout3Module
-    ],
+        ,ExpandableLayout1Module,ExpandableLayout2Module,ExpandableLayout3Module],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
