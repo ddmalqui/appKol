@@ -414,7 +414,35 @@ export class ListViewExpandableService implements IService {
                         "PAY WITH PAYPAL",
                         "PAY WITH VISA CARD",
                         "PAY WITH MAESTRO CARD"
-                    ]
+                    ],
+                    "wizard":[
+                {
+                    "logo": '',
+                    "iconSlider": 'icon-star-outline',
+                    "title": 'Fragment Example 1',
+                    "description": 'Text for Fragment Example 1 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonNext": 'Next',
+                    "backgroundImages":"assets/images/background/27.jpg"
+                },
+                {
+                    "logo": '',
+                    "iconSlider": 'icon-star-half',
+                    "title": 'Fragment Example 2',
+                    "description": 'Text for Fragment Example 2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonNext": 'Next',
+                    "buttonPrevious": 'Previous',
+                    "backgroundImages":"assets/images/background/7locales.jpg"
+                },
+                {
+                    "logo": '',
+                    "iconSlider": 'icon-star',
+                    "title": 'Fragment Example 3',
+                    "description": 'Text for Fragment Example 3 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonPrevious": 'Previous',
+                    "buttonFinish": 'Finish',
+                    "backgroundImages":"assets/images/background/27.jpg"
+                }
+                ]
                 },
                 {
                     "id": 7,

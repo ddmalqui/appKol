@@ -7,7 +7,7 @@
                     <ul no-margin no-padding class="collapsible">
                         <li margin *ngFor="let group of data.items;">
                             <!-- Expandable Full image with CTA Header-->
-                            <div class="collapsible-header">
+                            <div class="collapsible-header" *ngIf="group.wizard == null">
                                 <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
                                     <h2 item-title float-left>{{group.title}}</h2>
                                     <button *ngIf="group.gotoPage != null" ion-button float-right button-clear-outline outline round (click)="goToPage(group.gotoPage)">
@@ -19,6 +19,17 @@
                                   </button>
                                 </ion-item>
                             </div>
+
+                            <div class="collapsible-header collapsible-header-content" *ngIf="group.wizard != null">
+                                <ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true">
+                                    <ion-slide no-margin padding no-lines background-size *ngFor="let itemw of group.wizard;" background-size [ngStyle]="{'background-image': 'url(' + itemw.backgroundImages + ')'}">
+                                        <p wizard-body-text>{{itemw.description}}</p>
+                                    </ion-slide>
+                                </ion-slides>
+                                <button ion-button float-right button-clear-outline outline round> hola
+                                </button>
+                            </div>
+
                             <!-- Expandable Full image with CTA Body -->
                             <div class="item-accordion item-accordion-{{group.items.length}}" [ngClass]="{'active': isGroupShown(group) }" [hidden]="!isGroupShown(group)">
                                 <ion-item full default-button no-lines [ngClass]="group.class" *ngFor="let item of group.items;" (click)="goToPage(item.go)">

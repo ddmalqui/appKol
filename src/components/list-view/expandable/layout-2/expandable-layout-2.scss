@@ -12,7 +12,13 @@ expandable-layout-2 {
       margin: 5px 10px;
     }
   }
+  .collapsible-header-content{
+    position: relative;
+  }
 
+  .collapsible-header-content button{
+    z-index:99;
+  }
   .collapsible-header {
     [background-size]{
       height: 150px;
