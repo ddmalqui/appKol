@@ -335,26 +335,65 @@ export class ListViewExpandableService implements IService {
     getDataForLayout2 = (): any => {
         return {
             "items": [
+            {
+                "id": 6,
+                "title": "Product 5",
+                "backgroundImage": "assets/images/background/27.jpg",
+                "button": "Buscar",
+                "items": [
+                "PAY WITH PAYPAL",
+                "PAY WITH VISA CARD",
+                "PAY WITH MAESTRO CARD"
+                ],
+                "wizard":[
                 {
-                    "id": 1,
-                    "title": "",
-                    "backgroundImage": "assets/images/home/musica.jpg",
-                    "button": "MUSICA",
-                    "class":"default-button-musica",
+                    "logo": '',
+                    "iconSlider": 'icon-star-outline',
+                    "title": 'Fragment Example 1',
+                    "description": 'Text for Fragment Example 1 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonNext": 'Next',
+                    "backgroundImages":"assets/images/home/fundas1.jpeg"
+                },
+                {
+                    "logo": '',
+                    "iconSlider": 'icon-star-half',
+                    "title": 'Fragment Example 2',
+                    "description": 'Text for Fragment Example 2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonNext": 'Next',
+                    "buttonPrevious": 'Previous',
+                    "backgroundImages":"assets/images/home/fundas3.jpg"
+                },
+                {
+                    "logo": '',
+                    "iconSlider": 'icon-star',
+                    "title": 'Fragment Example 3',
+                    "description": 'Text for Fragment Example 3 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "buttonPrevious": 'Previous',
+                    "buttonFinish": 'Finish',
+                    "backgroundImages":"assets/images/home/fundas4.jpg"
+                }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "",
+                "backgroundImage": "assets/images/home/musica.jpg",
+                "button": "MUSICA",
+                "class":"default-button-musica",
                     //"gotoPage":"BuscarProductoPage",
                     "items": [
-                        {
-                            "text": "Auriculares",
-                            "go": "AuricularesPage",
-                        },
-                        {
-                            "text": "Parlantes",
-                            "go": "ParlantesPage",
-                        },
-                        {
-                            "text": "Luces",
-                            "go": "LucesPage",
-                        },
+                    {
+                        "text": "Auriculares",
+                        "go": "AuricularesPage",
+                    },
+                    {
+                        "text": "Parlantes",
+                        "go": "ParlantesPage",
+                    },
+                    {
+                        "text": "Luces",
+                        "go": "LucesPage",
+                    },
                     ]
                 },
                 {
@@ -363,9 +402,9 @@ export class ListViewExpandableService implements IService {
                     "backgroundImage": "assets/images/home/custom2.jpg",
                     "button": "BUY",
                     "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
+                    "PAY WITH PAYPAL",
+                    "PAY WITH VISA CARD",
+                    "PAY WITH MAESTRO CARD"
                     ]
                 },
                 {
@@ -375,9 +414,9 @@ export class ListViewExpandableService implements IService {
                     "button": "PRODUCTOS",
                     "gotoPage":"BuscarProductoPage",
                     "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
+                    "PAY WITH PAYPAL",
+                    "PAY WITH VISA CARD",
+                    "PAY WITH MAESTRO CARD"
                     ]
                 },
                 {
@@ -388,9 +427,21 @@ export class ListViewExpandableService implements IService {
                     "gotoPage":"IphonePage",
                     "icon": "logo-apple",
                     "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
+                    "PAY WITH PAYPAL",
+                    "PAY WITH VISA CARD",
+                    "PAY WITH MAESTRO CARD"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Product 5",
+                    "backgroundImage": "assets/images/background/28.jpg",
+                    "button": "JUEGOS",
+                    "gotoPage":"JuegosPage",
+                    "items": [
+                    "PAY WITH PAYPAL",
+                    "PAY WITH VISA CARD",
+                    "PAY WITH MAESTRO CARD"
                     ]
                 },
                 {
@@ -400,64 +451,14 @@ export class ListViewExpandableService implements IService {
                     "button": "LOCALES",
                     "gotoPage":"MapsLocalesPage",
                     "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
+                    "PAY WITH PAYPAL",
+                    "PAY WITH VISA CARD",
+                    "PAY WITH MAESTRO CARD"
                     ]
-                },
-                {
-                    "id": 6,
-                    "title": "Product 5",
-                    "backgroundImage": "assets/images/background/27.jpg",
-                    "button": "BUY",
-                    "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
-                    ],
-                    "wizard":[
-                {
-                    "logo": '',
-                    "iconSlider": 'icon-star-outline',
-                    "title": 'Fragment Example 1',
-                    "description": 'Text for Fragment Example 1 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-                    "buttonNext": 'Next',
-                    "backgroundImages":"assets/images/background/27.jpg"
-                },
-                {
-                    "logo": '',
-                    "iconSlider": 'icon-star-half',
-                    "title": 'Fragment Example 2',
-                    "description": 'Text for Fragment Example 2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-                    "buttonNext": 'Next',
-                    "buttonPrevious": 'Previous',
-                    "backgroundImages":"assets/images/background/7locales.jpg"
-                },
-                {
-                    "logo": '',
-                    "iconSlider": 'icon-star',
-                    "title": 'Fragment Example 3',
-                    "description": 'Text for Fragment Example 3 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-                    "buttonPrevious": 'Previous',
-                    "buttonFinish": 'Finish',
-                    "backgroundImages":"assets/images/background/27.jpg"
                 }
                 ]
-                },
-                {
-                    "id": 7,
-                    "title": "Product 5",
-                    "backgroundImage": "assets/images/background/28.jpg",
-                    "button": "BUY",
-                    "items": [
-                        "PAY WITH PAYPAL",
-                        "PAY WITH VISA CARD",
-                        "PAY WITH MAESTRO CARD"
-                    ]
-                }
-            ]
-        }
-    };
+            }
+        };
 
     getDataForLayout3 = (): any => {
         return {

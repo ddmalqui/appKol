@@ -21,13 +21,13 @@
                             </div>
 
                             <div class="collapsible-header collapsible-header-content" *ngIf="group.wizard != null">
-                                <ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true">
-                                    <ion-slide no-margin padding no-lines background-size *ngFor="let itemw of group.wizard;" background-size [ngStyle]="{'background-image': 'url(' + itemw.backgroundImages + ')'}">
+                                <ion-slides autoplay="3000" loop="true" speed="500" #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true">
+                                    <ion-slide no-margin padding no-lines background-size-big *ngFor="let itemw of group.wizard;" background-size [ngStyle]="{'background-image': 'url(' + itemw.backgroundImages + ')'}">
                                         <p wizard-body-text>{{itemw.description}}</p>
                                     </ion-slide>
                                 </ion-slides>
-                                <button ion-button float-right button-clear-outline outline round> hola
-                                </button>
+                                <!-- <button ion-button float-right button-clear-outline outline round> {{group.button}}
+                                </button> -->
                             </div>
 
                             <!-- Expandable Full image with CTA Body -->

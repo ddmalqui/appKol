@@ -6,6 +6,7 @@ import {IphonePage} from '../../../../pages/iphone/iphone';
 import {AuricularesPage} from '../../../../pages/auriculares/auriculares';
 import {ParlantesPage} from '../../../../pages/parlantes/parlantes';
 import {LucesPage} from '../../../../pages/luces/luces';
+import { JuegosPage } from '../../../../pages/juegos/juegos';
 
 
 
