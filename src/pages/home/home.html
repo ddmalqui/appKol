@@ -4,11 +4,18 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     	<img class="logo-header" src="assets/images/header/logo.png">
+    		{{myuuid}}
+    		{{mycordova}}
+  			{{mymodel}}
+  			{{myplatform}}
+  			{{myversion}}
+  			{{mymanufacturer}}
+  			{{myisVirtual}}
+  			{{myserial}}
         <img class="profile-header" src="assets/images/home/profile2.png" (click)="gotoPageProfile()">
     </ion-navbar>
 </ion-header>
 <!--Content-->
-
 <expandable-layout-2 *ngIf="paramsExpandableService.expandableLayout2" [data]="paramsExpandableService.data | async" [events]="paramsExpandableService.events">
 </expandable-layout-2>
 
