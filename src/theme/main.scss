@@ -34,6 +34,29 @@
 //  Default Overview Ionic
 //////////////////////////////////////////////////
 
+/*TO login*/
+/* Colors */
+$white:      #FFF;
+$black:      #000;
+$dark-green: #2FA583;
+$green:      #5AAD45;
+$green-74:   #74DAD2;
+$teal:       #30A69D;
+$grey:       #F7F9FC;
+$dark-gray:  #495B65;
+$black-3:     #3C3D3F;
+
+@import "./mixin";
+@import "./fonts";
+@import "./typography";
+
+@import "./header-footer";
+@import "./form";
+@import "./component";
+
+/* End */
+
+
 [no-margin] {
   margin: 0 !important;
 }
@@ -48,6 +71,7 @@ $item-ios-thumbnail-size: 120px;
 
 // Font Style
 @import "open-sans";
+
 $font-family-md-base: 'Open Sans', sans-serif !default;
 $font-family-ios-base: 'Open Sans', sans-serif !default;
 

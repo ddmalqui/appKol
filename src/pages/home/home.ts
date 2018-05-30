@@ -7,6 +7,7 @@ import { ListViewExpandableService } from '../../services/list-view-expandable-s
 import { IService } from '../../services/IService';
 
 import { ProfilePage } from '../profile/profile';
+import { LoginPage } from '../login/login';
 
 
 @IonicPage()
@@ -61,12 +62,12 @@ export class HomePage {
       console.log('isVirtual is: ' + this.device.isVirtual);
       this.myisVirtual = this.device.isVirtual;
       console.log('serial is: ' + this.device.serial);
-      this.myserial = 'asd'; //this.device.serial;
+      this.myserial = this.device.serial;
 
 }
 
 gotoPageProfile(){
-  this.navCtrl.push('ProfilePage');
+  this.navCtrl.push('LoginPage');
 }
 
 }

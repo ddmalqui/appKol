@@ -16,11 +16,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
+import { Facebook } from '@ionic-native/facebook'
+
 @NgModule({
     declarations: [MyApp],
     providers: [
         BarcodeScanner, StatusBar, SplashScreen,
-        ToastService, LoadingService,
+        ToastService, LoadingService,Facebook,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     ],
     imports: [
