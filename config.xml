@@ -97,4 +97,7 @@
         <variable name="APP_NAME" value="Kol Accesorios" />
         <variable name="ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-filepath" spec="^1.3.0" />
 </widget>

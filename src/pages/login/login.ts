@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
-import { ForgetPage } from '../forget/forget';
+import { ForgetPage } from '../../pages/forget/forget';
 import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase';
 
@@ -129,13 +129,13 @@ export class LoginPage {
 
   // Move to register page
   moveToRegister(){
-  	this.navCtrl.setRoot(RegisterPage);
+  	this.navCtrl.setRoot('RegisterPage');
   }
 
   //Move to Home Page
   moveToHome(res){
   	console.log('res',res);
-  	this.navCtrl.setRoot(HomePage,{res:res});
+  	this.navCtrl.setRoot('HomePage',{res:res});
   }
 
   presentToast(err) {
@@ -161,7 +161,7 @@ managePassword() {
   }
 }
 forgetpassword(){
-  this.navCtrl.setRoot(ForgetPage);
+  this.navCtrl.setRoot('ForgetPage');
 }
 
 }
