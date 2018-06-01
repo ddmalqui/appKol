@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { LoginPage } from '../login/login';
+
+import { AngularFireAuth } from 'angularfire2/auth';
+import { LoadingProvider } from '../../providers/loading/loading';
+
+
 /**
  * Generated class for the ProfilePage page.
  *
@@ -15,7 +21,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	userData:any;
+
+  constructor(public navCtrl: NavController,public afAuth: AngularFireAuth,
+   public navParams: NavParams, 
+    public loadingProvider : LoadingProvider) {
+  
+  		this.userData = this.navParams.get('res');
+  		console.log('userData',this.userData);
+
+  }
+
+ logout(){
+    this.loadingProvider.startLoading();
+  	this.afAuth.auth.signOut();
+  	this.navCtrl.setRoot(LoginPage);
+    this.loadingProvider.stopLoading();
+
   }
 
   ionViewDidLoad() {

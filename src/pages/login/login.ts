@@ -42,7 +42,8 @@ export class LoginPage {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.navCtrl.setRoot('ProfilePage');
+        console.log(user);
+        this.navCtrl.setRoot('ProfilePage',{res:user});
       } else {
      // not signed in.
    }
