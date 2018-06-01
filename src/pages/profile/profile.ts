@@ -35,7 +35,7 @@ export class ProfilePage {
  logout(){
     this.loadingProvider.startLoading();
   	this.afAuth.auth.signOut();
-  	this.navCtrl.setRoot(LoginPage);
+  	this.navCtrl.setRoot('LoginPage');
     this.loadingProvider.stopLoading();
 
   }

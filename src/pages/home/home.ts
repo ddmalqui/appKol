@@ -45,7 +45,6 @@ export class HomePage {
       this.paramsExpandableService = ExpandableService.prepareParams(this.pageExpandableService); 
       
       this.paramsExpandableService.data = ExpandableService.load(this.pageExpandableService);
-      
 
       console.log('Device UUID is: ' + this.device.uuid);
       this.myuuid = this.device.uuid;
