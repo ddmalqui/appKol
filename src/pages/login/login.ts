@@ -8,7 +8,7 @@ import { ForgetPage } from '../../pages/forget/forget';
 import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase';
 
-//import { LoadingProvider } from '../../providers/loading/loading';
+import { LoadingProvider } from '../../providers/loading/loading';
 
 import { Facebook } from '@ionic-native/facebook'
 
@@ -29,7 +29,7 @@ export class LoginPage {
   passeye:string ='eye';
   constructor(public toastCtrl: ToastController, public fb: FormBuilder, public navCtrl: NavController,
    public navParams: NavParams, public afAuth: AngularFireAuth,
-   //public loadingProvider: LoadingProvider,
+   public loadingProvider: LoadingProvider,
    public facebook: Facebook) {
   	this.authForm = this.fb.group({
       'email' : [null, Validators.compose([Validators.required])],
@@ -50,15 +50,15 @@ export class LoginPage {
 // For User Login
 
   userLogin(loginData){
-  //  this.loadingProvider.startLoading();
+    this.loadingProvider.startLoading();
   	console.log('loginData',loginData);
   		this.afAuth.auth.signInWithEmailAndPassword(loginData.email, loginData.password)
         .then(result => {
           console.log('result >>',result);
-          //this.loadingProvider.stopLoading();
+          this.loadingProvider.stopLoading();
           this.moveToHome(result);
         }).catch(err => {
-         // this.loadingProvider.stopLoading();
+          this.loadingProvider.stopLoading();
           console.log('err',err);
           this.presentToast(err);
         });
@@ -69,48 +69,49 @@ export class LoginPage {
 
   socialLogin(isLogin){
   	if (isLogin == "facebook"){
-      //this.loadingProvider.startLoading();
+      this.loadingProvider.startLoading();
 
       let provider = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(() => {
-        //  this.loadingProvider.startLoading();
+          this.loadingProvider.startLoading();
             firebase.auth().getRedirectResult().then((result)=>{
               console.log('result',result);
               this.moveToHome(result.user);
-          //    this.loadingProvider.stopLoading();
+             this.loadingProvider.stopLoading();
             }).catch(function(error){
-            //  this.loadingProvider.stopLoading();
+              this.loadingProvider.stopLoading();
               alert(error.message);
               console.log('error',error);
             })
-            //this.loadingProvider.stopLoading();
+            this.loadingProvider.stopLoading();
         }).catch(function(error){
-          //this.loadingProvider.stopLoading();
+          this.loadingProvider.stopLoading();
           alert(error.message);
           console.log('error',error);
         })
-        //this.loadingProvider.stopLoading();
+        this.loadingProvider.stopLoading();
   	}else if(isLogin == "google"){
-     // this.loadingProvider.startLoading();
+      this.loadingProvider.startLoading();
       let provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(() => {
-       //   this.loadingProvider.startLoading();
+          this.loadingProvider.startLoading();
             firebase.auth().getRedirectResult().then((result)=>{
               console.log('result',result);
-         //     this.loadingProvider.stopLoading();
-              this.moveToHome(result.user);
+              this.loadingProvider.stopLoading();
+              this.navCtrl.setRoot('ProfilePage');
+              //this.moveToHome(result.user);
             }).catch(function(error){
-           //   this.loadingProvider.stopLoading();
+              this.loadingProvider.stopLoading();
               alert(error.message);
               console.log('error',error);
             })
-           // this.loadingProvider.stopLoading();
+            this.loadingProvider.stopLoading();
         }).catch(function(error){
-         // this.loadingProvider.stopLoading();
+          this.loadingProvider.stopLoading();
           alert(error.message);
           console.log('error',error);
         })
-       // this.loadingProvider.stopLoading();
+        this.loadingProvider.stopLoading();
   	}else if(isLogin == "twitter"){
   		// this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
       // 	.then(res => {
@@ -135,7 +136,7 @@ export class LoginPage {
   //Move to Home Page
   moveToHome(res){
   	console.log('res',res);
-  	this.navCtrl.setRoot('HomePage',{res:res});
+  	this.navCtrl.setRoot('ProfilePage',{res:res});
   }
 
   presentToast(err) {
