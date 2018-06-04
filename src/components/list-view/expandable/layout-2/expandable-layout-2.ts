@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { IonicPage, Content, FabButton, NavController, Slides } from 'ionic-angular';
+import { IonicPage, Content, FabButton, NavController, Slides, AlertController } from 'ionic-angular';
 import { MapsLocalesPage } from '../../../../pages/maps-locales/maps-locales';
 import { BuscarProductoPage } from '../../../../pages/buscar-producto/buscar-producto';
 import {IphonePage} from '../../../../pages/iphone/iphone';
@@ -7,6 +7,7 @@ import {AuricularesPage} from '../../../../pages/auriculares/auriculares';
 import {ParlantesPage} from '../../../../pages/parlantes/parlantes';
 import {LucesPage} from '../../../../pages/luces/luces';
 import { JuegosPage } from '../../../../pages/juegos/juegos';
+import { Authentication } from '../../../../services/authentication';
 
 
 
@@ -31,7 +32,9 @@ export class ExpandableLayout2 {
   finish:boolean = true
 
 
-  constructor(public navCtrl: NavController) { 
+  constructor(public navCtrl: NavController, 
+    private alertCtr: AlertController, 
+    private authCtr: Authentication) { 
 
   this.prev = false;
         this.next = true;
@@ -84,6 +87,30 @@ export class ExpandableLayout2 {
 
     ngOnChanges(changes: { [propKey: string]: any }) {
         this.data = changes['data'].currentValue;
+      }
+
+      CargarTel(){
+        let addTel = this.alertCtr.create({
+          title:"!Dejanos tu Numero!",
+          message:"En unos minutos nos comicaremos con vos y respondemos todas tus dudas",
+          inputs: [
+          {
+            type:"number",
+            name:"numTelefono",
+            placeholder:"3425219129"
+          }],
+          buttons:[{
+            text:"Guardar",
+            handler:(inputData)=>{
+              let tel: number
+              tel = inputData.numTelefono;
+              console.log(tel);
+              this.authCtr.setTelefono(tel);
+              
+            }
+          }] 
+        });
+        addTel.present();
       }
 
 }

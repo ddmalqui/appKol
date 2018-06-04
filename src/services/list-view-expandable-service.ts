@@ -350,7 +350,7 @@ export class ListViewExpandableService implements IService {
                     "logo": '',
                     "iconSlider": 'icon-star-outline',
                     "title": 'Fragment Example 1',
-                    "description": 'Text for Fragment Example 1 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "description": 'DISEÑOS',
                     "buttonNext": 'Next',
                     "backgroundImages":"assets/images/home/fundas1.jpeg"
                 },
@@ -358,7 +358,7 @@ export class ListViewExpandableService implements IService {
                     "logo": '',
                     "iconSlider": 'icon-star-half',
                     "title": 'Fragment Example 2',
-                    "description": 'Text for Fragment Example 2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "description": 'RESISTENTES',
                     "buttonNext": 'Next',
                     "buttonPrevious": 'Previous',
                     "backgroundImages":"assets/images/home/fundas3.jpg"
@@ -367,7 +367,7 @@ export class ListViewExpandableService implements IService {
                     "logo": '',
                     "iconSlider": 'icon-star',
                     "title": 'Fragment Example 3',
-                    "description": 'Text for Fragment Example 3 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    "description": 'AGENDAS',
                     "buttonPrevious": 'Previous',
                     "buttonFinish": 'Finish',
                     "backgroundImages":"assets/images/home/fundas4.jpg"

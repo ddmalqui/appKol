@@ -21,12 +21,13 @@ import { Camera } from '@ionic-native/camera';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
 import { LoadingProvider } from '../providers/loading/loading';
+import {Authentication} from '../services/authentication';
 
 
 @NgModule({
     declarations: [MyApp],
     providers: [
-        BarcodeScanner, StatusBar, SplashScreen,
+        BarcodeScanner, StatusBar, SplashScreen,Authentication,
         ToastService, LoadingService,Facebook,Camera,File,FilePath,LoadingProvider,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     ],

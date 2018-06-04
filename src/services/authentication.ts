@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 const identifire = "token";
 @Injectable()
 
 export class Authentication{
-	constructor(private AgularAuth : AngularFireAuth){
+	constructor(private AgularAuth : AngularFireAuth,
+		private firebaseDBCtr: AngularFireDatabase){
 		this.setUp();
 	}
 
@@ -67,6 +69,15 @@ export class Authentication{
 			// })
 		}
 
-
+		setTelefono(tel: number){
+		//var database = firebase.database();
+		var displayDate = new Date().toLocaleDateString();
+		 var newPostRef = firebase.database().ref('telefonos/anonimos').push();
+		 newPostRef.set
+		 ({
+    		telefono: tel,
+    		fecha: displayDate
+  			});
+		}
 
 }

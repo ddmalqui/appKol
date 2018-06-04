@@ -577,8 +577,8 @@ $radio-ios-color-on: theme-colors('mainColors', 'accent-other');
   font-weight: 300;
 }
 [wizard-body-text]{
-  color: theme-colors('textColors', 'accent-first', 'opacity60');
-  font-size: $h4-font-size !important;
+  color: theme-colors('textColors', 'accent-first', 'opacity80');
+  font-size: 20px !important;
   letter-spacing: 1px;
   font-weight: 300;
 }
@@ -787,7 +787,7 @@ $background-color: theme-colors('mainColors', 'secondary');
 
   .alert-message {
     overflow-y: hidden;
-    max-height: 40px !important;
+    max-height: 80px !important;
     padding: 0 24px 0 24px !important;
   }
 
@@ -832,5 +832,18 @@ max-width: 40px;
 border-radius: 40px;
 border: 2px solid gray;
 background-color: gray;
+}
+
+.slide-zoom{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.no-spinners {
+-moz-appearance:textfield;
+}
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
 }
 

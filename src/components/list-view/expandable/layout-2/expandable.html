@@ -8,7 +8,7 @@
                         <li margin *ngFor="let group of data.items;">
                             <!-- Expandable Full image with CTA Header-->
                             <div class="collapsible-header" *ngIf="group.wizard == null">
-                                <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
+                                <ion-item no-margin no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
                                     <h2 item-title float-left>{{group.title}}</h2>
                                     <button *ngIf="group.gotoPage != null" ion-button float-right button-clear-outline outline round (click)="goToPage(group.gotoPage)">
                                         <ion-icon name="{{group.icon}}" *ngIf="group.icon != null"></ion-icon> {{group.button}}
@@ -22,8 +22,11 @@
 
                             <div class="collapsible-header collapsible-header-content" *ngIf="group.wizard != null">
                                 <ion-slides autoplay="3000" loop="true" speed="500" #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true">
-                                    <ion-slide no-margin padding no-lines background-size-big *ngFor="let itemw of group.wizard;" background-size [ngStyle]="{'background-image': 'url(' + itemw.backgroundImages + ')'}">
-                                        <p wizard-body-text>{{itemw.description}}</p>
+                                    <ion-slide no-margin no-lines background-size-big *ngFor="let itemw of group.wizard;" background-size [ngStyle]="{'background-image': 'url(' + itemw.backgroundImages + ')'}">
+                                        <p wizard-body-text>
+                                            <strong>{{itemw.description}}
+                                            </strong>
+                                        </p>
                                     </ion-slide>
                                 </ion-slides>
                                 <!-- <button ion-button float-right button-clear-outline outline round> {{group.button}}
@@ -49,7 +52,7 @@
 </ion-content>
 <!---Fab Button-->
 <ion-fab #fab bottom right>
-    <button button-ion-fab ion-fab (click)="onEvent('onFab', group, $event)">
-    <ion-icon name="add"></ion-icon>
+    <button button-ion-fab ion-fab (click)="CargarTel()">
+    <ion-icon name="logo-whatsapp"></ion-icon>
   </button>
 </ion-fab>
