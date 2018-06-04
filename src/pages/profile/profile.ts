@@ -31,11 +31,13 @@ export class ProfilePage {
   		this.userData = this.navParams.get('res');
   		console.log('userData',this.userData);
 
+
+
   }
 
  logout(){
     this.loadingProvider.startLoading();
-  	this.afAuth.auth.signOut();
+  	//this.afAuth.auth.signOut();
   	this.navCtrl.setRoot('LoginPage');
     this.loadingProvider.stopLoading();
 
