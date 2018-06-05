@@ -7,7 +7,12 @@ import {AuricularesPage} from '../../../../pages/auriculares/auriculares';
 import {ParlantesPage} from '../../../../pages/parlantes/parlantes';
 import {LucesPage} from '../../../../pages/luces/luces';
 import { JuegosPage } from '../../../../pages/juegos/juegos';
+import { PersonalizacionPage } from '../../../../pages/personalizacion/personalizacion';
+
 import { Authentication } from '../../../../services/authentication';
+
+import { LoadingProvider } from '../../../../providers/loading/loading';
+
 
 
 
@@ -34,7 +39,8 @@ export class ExpandableLayout2 {
 
   constructor(public navCtrl: NavController, 
     private alertCtr: AlertController, 
-    private authCtr: Authentication) { 
+    private authCtr: Authentication,
+    public loadingProvider: LoadingProvider) { 
 
   this.prev = false;
         this.next = true;
@@ -89,7 +95,7 @@ export class ExpandableLayout2 {
         this.data = changes['data'].currentValue;
       }
 
-      CargarTel(){
+      CargarTel(event: string, item: any, e: any){
         let addTel = this.alertCtr.create({
           title:"!Dejanos tu Numero!",
           message:"En unos minutos nos comicaremos con vos y respondemos todas tus dudas",
@@ -102,11 +108,15 @@ export class ExpandableLayout2 {
           buttons:[{
             text:"Guardar",
             handler:(inputData)=>{
+              this.loadingProvider.startLoading();
               let tel: number
               tel = inputData.numTelefono;
               console.log(tel);
               this.authCtr.setTelefono(tel);
-              
+              this.loadingProvider.stopLoading();
+               if (this.events[event]) {
+                  this.events[event](item);
+                }
             }
           }] 
         });
