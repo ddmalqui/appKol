@@ -23,7 +23,7 @@ google-card-layout-3 {
     }
     [card-content] {
       position: relative;
-      @include darkening-blend-mode;
+      @include darkening-blend-mode-without-backgroundColor;
       border-radius: $border-radius !important;
       &:before {
           z-index: 3;

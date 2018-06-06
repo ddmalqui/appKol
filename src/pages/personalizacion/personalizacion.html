@@ -4,9 +4,10 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title text-left>{{params.title}}</ion-title>
+        <img class="logo-header logo-header-rigth" src="assets/images/header/logo.png">
     </ion-navbar>
 </ion-header>
 <!--Content-->
+
 <google-card-layout-3 *ngIf="params.googleCardsLayout3" [data]="params.data | async" [events]="params.events">
 </google-card-layout-3>

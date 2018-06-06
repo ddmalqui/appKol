@@ -181,6 +181,20 @@ $color-2: theme-colors('mainColors', 'secondary-first');
        @include gradient-accent ($color-1, $color-2);
      }
 }
+// Darkening and Black&White Blend Mode
+@mixin darkening-blend-mode-without-backgroundColor {
+     &::before {
+       content: "";
+       display: block;
+       height: 100%;
+       width: 100%;
+       top: 0;
+       left: 0;
+       position: absolute;
+       pointer-events: none;
+     }
+}
+
 
 
 

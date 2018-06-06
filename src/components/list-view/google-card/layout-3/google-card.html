@@ -5,7 +5,7 @@
             <ion-col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 *ngFor="let item of data.items;let i = index">
                 <ion-card padding text-center (click)="onEvent('onItemClick', item.title, $event)">
                     <div card-content>
-                        <img images-filter src="{{item.image}}" />
+                        <img src="{{item.image}}" />
                         <div card-title>{{item.title}}</div>
                         <div card-subtitle>{{item.subtitle}}</div>
                     </div>
@@ -17,6 +17,6 @@
 <!--Fab Button-->
 <ion-fab #fab bottom right>
     <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
-    <ion-icon name="add"></ion-icon>
+    <ion-icon name="cloud-upload"></ion-icon>
   </button>
 </ion-fab>

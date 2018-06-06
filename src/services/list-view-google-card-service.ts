@@ -181,32 +181,32 @@ export class ListViewGoogleCardsService implements IService {
                 {
                     "id": 1,
                     "image": "assets/images/background/0.jpg",
-                    "title": "Card Title",
-                    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    "title": "",
+                    "subtitle": ""
                 },
                 {
                     "id": 2,
                     "image": "assets/images/background/9.jpg",
-                    "title": "Card Title",
-                    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    "title": "",
+                    "subtitle": ""
                 },
                 {
                     "id": 3,
                     "image": "assets/images/background/8.jpg",
-                    "title": "Card Title",
-                    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    "title": "",
+                    "subtitle": ""
                 },
                 {
                     "id": 4,
                     "image": "assets/images/background/10.jpg",
-                    "title": "Card Title",
-                    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    "title": "",
+                    "subtitle": ""
                 },
                 {
                     "id": 5,
                     "image": "assets/images/background/13.jpg",
-                    "title": "Card Title",
-                    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    "title": "",
+                    "subtitle": ""
                 },
                 {
                     "id": 6,

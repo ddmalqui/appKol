@@ -8,6 +8,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+//import { AngularFireStorageModule } from 'angularfire2/storage';
+
 import { AppSettings } from '../services/app-settings'
 import { ToastService } from '../services/toast-service'
 import { LoadingService } from '../services/loading-service'
