@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuthModule } from 'angularfire2/auth';    
 
 //import { AngularFireStorageModule } from 'angularfire2/storage';
 
@@ -23,7 +23,7 @@ import { Camera } from '@ionic-native/camera';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
 import { LoadingProvider } from '../providers/loading/loading';
-import {Authentication} from '../services/authentication';
+import { Authentication } from '../services/authentication';
 
 
 @NgModule({

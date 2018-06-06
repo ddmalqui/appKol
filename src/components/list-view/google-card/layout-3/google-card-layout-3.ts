@@ -1,6 +1,9 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, Content, FabButton } from 'ionic-angular';
 
+import { Authentication } from '../../../../services/authentication';
+
+
 @IonicPage()
 @Component({
     selector: 'google-card-layout-3',
@@ -15,7 +18,10 @@ export class GoogleCardLayout3 {
     fabButton: FabButton;
 
     slider = {};
-    constructor() { }
+    files : any;
+
+    constructor(
+    private authCtr: Authentication) { }
 
     slideHasChanged(slider, index): void {
         this.slider[index] = slider;
@@ -48,4 +54,19 @@ export class GoogleCardLayout3 {
             this.fabButton.setElementClass("fab-button-out", d.directionY == "down");
         });
     }
+
+
+  fileChanges(ev){
+    console.log(ev.target.files);
+    this.files = ev.target.files[0];
+  }
+
+    submit(){
+      if (this.files.lenght <= 0)
+          return;
+      this.authCtr.upload(this.files);    
+
+  }
+
+
 }
