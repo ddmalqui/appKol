@@ -3,7 +3,7 @@ export const AppSettings = Object.freeze({
     "SHOW_START_WIZARD": false,
     "SUBSCRIBE": false,
     "TOAST": {
-      "duration": 1000,
+      "duration": 4000,
       "position": "buttom"
     },
     "FIREBASE_CONFIG": {

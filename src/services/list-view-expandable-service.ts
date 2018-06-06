@@ -9,7 +9,9 @@ import { LoadingService } from './loading-service'
 @Injectable()
 export class ListViewExpandableService implements IService {
 
-    constructor(public af: AngularFireDatabase, private loadingService: LoadingService, private toastCtrl: ToastService) { }
+    constructor(public af: AngularFireDatabase, private loadingService: LoadingService, 
+        private toastCtrl: ToastService) { 
+    }
 
     getId = (): string => 'expandable';
 
@@ -401,6 +403,7 @@ export class ListViewExpandableService implements IService {
                     "title": "",
                     "backgroundImage": "assets/images/home/custom2.jpg",
                     "button": "BUY",
+                    "gotoPage":"PersonalizacionPage",
                     "items": [
                     "PAY WITH PAYPAL",
                     "PAY WITH VISA CARD",
@@ -535,7 +538,8 @@ export class ListViewExpandableService implements IService {
                   that.toastCtrl.presentToast("Share");
             },
             'onFab': function (item: any) {
-                  that.toastCtrl.presentToast("Fab");
+                  that.toastCtrl.presentToast("En unos minutos nos vamos a comunicar con vos!!");
+
             },
         };
     };
