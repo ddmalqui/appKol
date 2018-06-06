@@ -1,18 +1,12 @@
-<!--
-  Generated template for the PersonalizacionPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
+<!--Google card components-->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>personalizacion</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-left>{{params.title}}</ion-title>
+    </ion-navbar>
 </ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+<!--Content-->
+<google-card-layout-3 *ngIf="params.googleCardsLayout3" [data]="params.data | async" [events]="params.events">
+</google-card-layout-3>
