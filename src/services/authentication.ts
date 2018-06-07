@@ -94,8 +94,7 @@ export class Authentication{
 			(snapshot)=>{},
 			(err)=>reject(err),
 			() => {
-				console.log('uploadTask.snapshot.downloadURL');
-				console.log(uploadTask.snapshot.downloadURL);
+				//console.log(uploadTask.snapshot.downloadURL);
 				resolve(uploadTask.snapshot.downloadURL);
 				
 					} 

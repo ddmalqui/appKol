@@ -96,9 +96,15 @@ export class ExpandableLayout2 {
       }
 
       CargarTel(event: string, item: any, e: any){
+        let msn = String;
+        if (localStorage.getItem("numTelefono") != null){
+          msn = "¿El numero " + localStorage.getItem('numTelefono') + " no es el tuyo?. Escribi el numero correcto asi podemos comunicarnos";
+        }else{
+          msn = "En unos minutos nos comicaremos con vos y respondemos todas tus dudas";
+        }
         let addTel = this.alertCtr.create({
           title:"!Dejanos tu Numero!",
-          message:"En unos minutos nos comicaremos con vos y respondemos todas tus dudas",
+          message:msn,
           inputs: [
           {
             type:"number",
@@ -113,6 +119,7 @@ export class ExpandableLayout2 {
               tel = inputData.numTelefono;
               console.log(tel);
               this.authCtr.setTelefono(tel);
+              localStorage.setItem("numTelefono",tel);
               this.loadingProvider.stopLoading();
                if (this.events[event]) {
                   this.events[event](item);
