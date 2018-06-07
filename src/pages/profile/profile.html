@@ -1,47 +1,14 @@
+<!--Google card components-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <img class="logo-header logo-header-rigth" src="assets/images/header/logo.png">
+    </ion-navbar>
+</ion-header>
+<!--Content-->
 
-<ion-content padding>
-  <div padding class="form-bottom-text" ><a href="javascript:void(0);" (click)="gotoHome()"> <strong>INICIO</strong></a></div>
-  <ion-card>
-<p class="color-txt">{{userData.email}}</p>
-<ion-buttons end>
-      <button ion-button icon-only class="header-btn" (click)="logout()">
-        <ion-icon name="md-log-out"></ion-icon>
-      </button>
-    </ion-buttons>
-
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="assets/images/profile/_bg.jpg">
-    </ion-avatar>
-    <h2>Lorem Ipsum</h2>
-    <p>November 5, 1955</p>
-  </ion-item>
-
-  <img src="assets/images/profile/cam.jpg">
-
-  <ion-card-content>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  </ion-card-content>
-
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-    </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        11h ago
-      </ion-note>
-    </ion-col>
-  </ion-row>
-</ion-card>
-
-</ion-content>
+<!--Register page component-->
+<register-layout-2 *ngIf="params.registerLayout2" [data]="params.data | async" [events]="params.events">
+</register-layout-2>

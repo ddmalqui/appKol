@@ -96,7 +96,7 @@ export class ExpandableLayout2 {
       }
 
       CargarTel(event: string, item: any, e: any){
-        let msn = String;
+        let msn : string;
         if (localStorage.getItem("numTelefono") != null){
           msn = "¿El numero " + localStorage.getItem('numTelefono') + " no es el tuyo?. Escribi el numero correcto asi podemos comunicarnos";
         }else{
@@ -119,7 +119,7 @@ export class ExpandableLayout2 {
               tel = inputData.numTelefono;
               console.log(tel);
               this.authCtr.setTelefono(tel);
-              localStorage.setItem("numTelefono",tel);
+              localStorage.setItem("numTelefono",''+tel);
               this.loadingProvider.stopLoading();
                if (this.events[event]) {
                   this.events[event](item);
