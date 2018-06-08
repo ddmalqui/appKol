@@ -1,9 +1,29 @@
 <!--Theme Full Image Cards-->
 <ion-content has-header>
+      <ion-item>
+    <p>{{imageURI}}</p>
+    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+  </ion-item>
+  <ion-item>
+    <h4>Image Preview</h4>
+    <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Upload</button>
+  </ion-item>
+
     <div>
         <input type="file" name="" (change)="fileChanges($event)">
         <button (tap)="submit()" ion-button secondary>Subit Archivo</button>
     </div>
+
+    <ion-card padding text-center>
+                        <video preload="auto" class="video bg-vidAeroplane" playsinline>
+            <source src="assets/video/promoPersonalizada.webm" type='video/webm'>
+        </video>
+                </ion-card>
+               
+
     <ion-grid no-padding *ngIf="data != null">
         <ion-row>
             <ion-col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 *ngFor="let item of data.items;let i = index">
@@ -17,6 +37,7 @@
             </ion-col>
         </ion-row>
     </ion-grid>
+
 </ion-content>
 <!--Fab Button-->
 <ion-fab #fab bottom right>
