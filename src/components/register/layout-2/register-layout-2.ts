@@ -10,6 +10,7 @@ export class RegisterLayout2 {
 
     @Input() data: any;
     @Input() events: any;
+    @Input() infoUser: any;
 
     username: string;
     password: string;

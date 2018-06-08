@@ -25,10 +25,10 @@ import { RegisterService } from '../../services/register-service';
 })
 export class ProfilePage {
 
-  userData:any;
   page: any;
     data: any = {};
     params: any = {};
+    infoUser: any = {};
 
   constructor(public navCtrl: NavController,public afAuth: AngularFireAuth,
    public navParams: NavParams, 
@@ -43,10 +43,17 @@ export class ProfilePage {
                     }
          this.params = regServ.prepareParams(this.page); 
          this.params.data = regServ.load(this.page);
-         console.log('res i');
-         console.log(this.navParams.get('res').email);
-         console.log('res f');
-         this.params.data.user = this.navParams.get('res');
+         this.infoUser = this.navParams.get('res');
+
+         if (this.navParams.get('res') != null){
+             console.log('res i');
+             console.log(this.navParams.get('res').email);
+             console.log('res f');
+         }else{
+
+         }
+         
+         
 
 
   }
