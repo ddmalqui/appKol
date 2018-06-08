@@ -1,8 +1,10 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, Content, FabButton } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { Authentication } from '../../../../services/authentication';
 
+import { LoadingProvider } from '../../../../providers/loading/loading';
 
 @IonicPage()
 @Component({
@@ -20,8 +22,12 @@ export class GoogleCardLayout3 {
     slider = {};
     files : any;
 
+    imageURI:any;
+    imageFileName:any;
+
     constructor(
-    private authCtr: Authentication) { }
+    private authCtr: Authentication,
+      private camera: Camera) { }
 
     slideHasChanged(slider, index): void {
         this.slider[index] = slider;
@@ -67,6 +73,21 @@ export class GoogleCardLayout3 {
       this.authCtr.upload(this.files);    
 
   }
+
+  getImage() {
+  const options: CameraOptions = {
+    quality: 100,
+    destinationType: this.camera.DestinationType.FILE_URI,
+    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+  }
+
+  this.camera.getPicture(options).then((imageData) => {
+    this.imageURI = imageData;
+  }, (err) => {
+    console.log(err);
+  });
+  
+    }
 
 
 }
