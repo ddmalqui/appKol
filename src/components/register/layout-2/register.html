@@ -6,6 +6,7 @@
                 <!--Logo-->
                 <div logo>
                     <img [src]="data.logo" *ngIf="data.logo != null" />
+                      <h2 text-center text-center><strong>Hola, {{infoUser.email}}</strong></h2>
                 </div>
                 <!--End logo-->
                 <!--Form-->
@@ -16,8 +17,16 @@
                             <i icon-small class="icon {{data.iconEmail}}"></i>
                         </ion-icon>
                         <!---Input field email-->
-                        <ion-label floating>{{infoUser.email}}</ion-label>
-                        <ion-input required type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required [(ngModel)]="email"></ion-input>
+                        <p floating>{{infoUser.email}}</p>
+                    </ion-item>
+                     <ion-item no-padding transparent>
+                        <!--Icon for email-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon call"></i>
+                        </ion-icon>
+                        <!---Input field email-->
+                        <ion-label floating>5555555555</ion-label>
+                        <ion-input required type="phone" required></ion-input>
                     </ion-item>
                     <!---Register button-->
                     <button ion-button float-right clear button-clear (click)="onEvent('onRegister')">{{data.submit}}</button>

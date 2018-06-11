@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
+import { Authentication } from '../../services/authentication';
+
 import { ForgetPage } from '../../pages/forget/forget';
 import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase';
@@ -30,7 +32,7 @@ export class LoginPage {
   passeye:string ='eye';
   constructor(public toastCtrl: ToastController, public fb: FormBuilder, public navCtrl: NavController,
    public navParams: NavParams, public afAuth: AngularFireAuth,
-   public loadingProvider: LoadingProvider) {
+   public loadingProvider: LoadingProvider,public AuthServ: Authentication) {
   	this.authForm = this.fb.group({
       'email' : [null, Validators.compose([Validators.required])],
       'password': [null, Validators.compose([Validators.required])],
@@ -39,20 +41,20 @@ export class LoginPage {
         this.email = this.authForm.controls['email'];
         this.password = this.authForm.controls['password'];
 
-        this.loadingProvider.startLoading();
-          this.afAuth.authState.subscribe((firebaseUser) => {
-        if(firebaseUser){
-          localStorage.setItem(identifire,firebaseUser.uid);
-          console.log('user = ' + firebaseUser.uid);
-          this.loadingProvider.stopLoading();
-          this.navCtrl.setRoot('ProfilePage',{res:firebaseUser});
-        }else{
-          this.token = null;
-          console.log('user = null');
-          this.loadingProvider.stopLoading();
-        }
-      }
-        )
+      //   this.loadingProvider.startLoading();
+      //     this.afAuth.authState.subscribe((firebaseUser) => {
+      //   if(firebaseUser){
+      //     localStorage.setItem(identifire,firebaseUser.uid);
+      //     console.log('user = ' + firebaseUser.uid);
+      //     this.loadingProvider.stopLoading();
+      //     this.navCtrl.setRoot('ProfilePage',{res:firebaseUser});
+      //   }else{
+      //     this.token = null;
+      //     console.log('user = null');
+      //     this.loadingProvider.stopLoading();
+      //   }
+      // }
+        //)
 
   }
 
@@ -93,7 +95,7 @@ export class LoginPage {
         firebase.auth().signInWithRedirect(provider).then(() => {
           this.loadingProvider.startLoading();
             firebase.auth().getRedirectResult().then((result)=>{
-              console.log('result',result);
+              console.log('result');
               this.moveToHome(result.user);
              this.loadingProvider.stopLoading();
             }).catch(function(error){
@@ -109,26 +111,31 @@ export class LoginPage {
         })
         this.loadingProvider.stopLoading();
   	}else if(isLogin == "google"){
-      this.loadingProvider.startLoading();
-      let provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithRedirect(provider).then(() => {
-          this.loadingProvider.startLoading();
-            firebase.auth().getRedirectResult().then((result)=>{
-              console.log('result',result);
-              this.loadingProvider.stopLoading();
-              this.moveToHome(result.user);
-            }).catch(function(error){
-              this.loadingProvider.stopLoading();
-              alert(error.message);
-              console.log('error',error);
-            })
-            this.loadingProvider.stopLoading();
-        }).catch(function(error){
-          this.loadingProvider.stopLoading();
-          alert(error.message);
-          console.log('error',error);
-        })
-        this.loadingProvider.stopLoading();
+      console.log('adsfasdfaaa');
+        this.AuthServ.createUserWithGoogle();
+        this.gotoHome();
+      // this.loadingProvider.startLoading();
+      // let provider = new firebase.auth.GoogleAuthProvider();
+      //   firebase.auth().signInWithRedirect(provider).then(() => {
+      //     this.loadingProvider.startLoading();
+      //       firebase.auth().getRedirectResult().then((result)=>{
+      //         console.log('result');
+      //         this.loadingProvider.stopLoading();
+      //        console.log(result.user);
+      //         this.AuthServ.setProfileData(result.user);
+      //         this.moveToHome(result.user);
+      //       }).catch(function(error){
+      //         this.loadingProvider.stopLoading();
+      //         alert(error.message);
+      //         console.log('error',error);
+      //       })
+      //       this.loadingProvider.stopLoading();
+      //   }).catch(function(error){
+      //     this.loadingProvider.stopLoading();
+      //     alert(error.message);
+      //     console.log('error',error);
+      //   })
+      //   this.loadingProvider.stopLoading();
   	}else if(isLogin == "twitter"){
   		// this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
       // 	.then(res => {

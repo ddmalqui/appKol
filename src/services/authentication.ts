@@ -21,7 +21,6 @@ export class Authentication{
 		setUp(){
 			//guardo en el local storage si alguien ya esta loguiado.
 			this.token = this.getTockenFromLS();
-			console.log(this.token);
 			this.AgularAuth.authState.subscribe((firebaseUser) => {
 				if(firebaseUser){
 					localStorage.setItem(identifire,firebaseUser.uid);
@@ -66,10 +65,14 @@ export class Authentication{
 				)
 		}
 
-		setProfileData(){
-			// this.AgularAuth.authState.suscribe(auth => {
-			// 	this.AngularDB.list('profile/${auth.uid}')
-			// })
+		setProfileData(data){
+			console.log('dasaaaaa:');
+			var newPostRef = firebase.database().ref('perfiles/').push();
+		 newPostRef.set
+		 ({
+    		telefono: 45454,
+    		fecha: 'hola'
+  			});
 		}
 
 		setTelefono(tel: number){

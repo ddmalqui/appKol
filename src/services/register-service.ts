@@ -46,7 +46,7 @@ export class RegisterService implements IService {
 
     getDataForLayout2 = (): any => {
         return {
-            "logo": "assets/images/logo/login-2.png",
+            "logo": "assets/images/logo/logo-s.png",
             "iconAccount": "icon-account",
             "username": "Username",
             "iconHome": "icon-home-variant",
