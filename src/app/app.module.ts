@@ -18,7 +18,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
-import { Facebook } from '@ionic-native/facebook';
+//import { Facebook } from '@ionic-native/facebook';
 import { Camera } from '@ionic-native/camera';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
@@ -30,7 +30,9 @@ import { Authentication } from '../services/authentication';
     declarations: [MyApp],
     providers: [
         BarcodeScanner, StatusBar, SplashScreen,Authentication,
-        ToastService, LoadingService,Facebook,Camera,File,FilePath,LoadingProvider,
+        ToastService, LoadingService
+        //,Facebook
+        ,Camera,File,FilePath,LoadingProvider,
         { provide: ErrorHandler, useClass: IonicErrorHandler },
     ],
     imports: [

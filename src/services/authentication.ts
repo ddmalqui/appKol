@@ -10,8 +10,7 @@ export class Authentication{
 
 	storageRef : firebase.storage.Reference;
 
-	constructor(private AgularAuth : AngularFireAuth,
-		private firebaseDBCtr: AngularFireDatabase){
+	constructor(private AgularAuth : AngularFireAuth){
 		this.setUp();
 		this.storageRef = firebase.storage().ref();
 	}

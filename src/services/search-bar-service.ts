@@ -9,7 +9,7 @@ import { LoadingService } from './loading-service'
 @Injectable()
 export class SearchBarService implements IService {
 
-    constructor(public af: AngularFireDatabase, private loadingService: LoadingService, private toastCtrl: ToastService) { }
+    constructor(public af: AngularFireDatabase, private loadingService: LoadingService) { }
 
     getId = (): string => 'searchBars';
 
@@ -540,7 +540,6 @@ getDataForLayout3juegos = (): any => {
     };
 
     getEventsForTheme = (menuItem: any): any => {
-        var that = this;
         return {
             'onTextChange': function (text: any) {
                  // that.toastCtrl.presentToast(text);

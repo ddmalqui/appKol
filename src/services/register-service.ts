@@ -32,7 +32,7 @@ export class RegisterService implements IService {
 
     getDataForLayout1 = (): any => {
         return {
-            "logo": "assets/images/logo/login-3.png",
+            "logo": "assets/images/logo/logo-s.png",
             "register": "Register",
             "username": "Username",
             "city": "City",

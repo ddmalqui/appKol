@@ -10,8 +10,6 @@ import firebase from 'firebase';
 
 import { LoadingProvider } from '../../providers/loading/loading';
 
-import { Facebook } from '@ionic-native/facebook'
-
 const identifire = "token";
 @IonicPage()
 @Component({
@@ -32,8 +30,7 @@ export class LoginPage {
   passeye:string ='eye';
   constructor(public toastCtrl: ToastController, public fb: FormBuilder, public navCtrl: NavController,
    public navParams: NavParams, public afAuth: AngularFireAuth,
-   public loadingProvider: LoadingProvider,
-   public facebook: Facebook) {
+   public loadingProvider: LoadingProvider) {
   	this.authForm = this.fb.group({
       'email' : [null, Validators.compose([Validators.required])],
       'password': [null, Validators.compose([Validators.required])],
