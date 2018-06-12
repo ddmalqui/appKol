@@ -1,12 +1,3 @@
-<!--Google card components-->
-<ion-header>
-    <ion-navbar>
-     <button ion-button (click)="gotoHome()">
-        <ion-icon name="arrow-back"></ion-icon>
-    </button>
-    </ion-navbar>
-</ion-header>
-<!--Content-->
 
 <!--Register page component-->
 <register-layout-2 *ngIf="params.registerLayout2" [data]="params.data | async" [events]="params.events" [infoUser]="infoUser">

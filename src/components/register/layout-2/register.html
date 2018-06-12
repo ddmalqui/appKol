@@ -1,6 +1,9 @@
 <!-- Themes Register + Image -->
 <ion-content has-header white-background>
     <ion-grid *ngIf="data != null">
+        <a (click)="gotoHome()">
+        HOME
+        </a>
         <ion-row wrap padding>
             <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
                 <!--Logo-->
@@ -10,27 +13,11 @@
                 </div>
                 <!--End logo-->
                 <!--Form-->
-                <div class="form">
-                    <ion-item no-padding transparent>
-                        <!--Icon for email-->
-                        <ion-icon item-left>
-                            <i icon-small class="icon {{data.iconEmail}}"></i>
-                        </ion-icon>
-                        <!---Input field email-->
-                        <p floating>{{infoUser.email}}</p>
-                    </ion-item>
-                     <ion-item no-padding transparent>
-                        <!--Icon for email-->
-                        <ion-icon item-left>
-                            <i icon-small class="icon call"></i>
-                        </ion-icon>
-                        <!---Input field email-->
-                        <ion-label floating>5555555555</ion-label>
-                        <ion-input required type="phone" required></ion-input>
-                    </ion-item>
-                    <!---Register button-->
-                    <button ion-button float-right clear button-clear (click)="onEvent('onRegister')">{{data.submit}}</button>
+                <div>
+                <img [src]="data.camiseta"/>
+                <p>Ya estas participando por la camiseta de la seleccion!!!</p>
                 </div>
+
             </ion-col>
         </ion-row>
     </ion-grid>

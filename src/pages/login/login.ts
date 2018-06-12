@@ -41,20 +41,20 @@ export class LoginPage {
         this.email = this.authForm.controls['email'];
         this.password = this.authForm.controls['password'];
 
-      //   this.loadingProvider.startLoading();
-      //     this.afAuth.authState.subscribe((firebaseUser) => {
-      //   if(firebaseUser){
-      //     localStorage.setItem(identifire,firebaseUser.uid);
-      //     console.log('user = ' + firebaseUser.uid);
-      //     this.loadingProvider.stopLoading();
-      //     this.navCtrl.setRoot('ProfilePage',{res:firebaseUser});
-      //   }else{
-      //     this.token = null;
-      //     console.log('user = null');
-      //     this.loadingProvider.stopLoading();
-      //   }
-      // }
-        //)
+        this.loadingProvider.startLoading();
+          this.afAuth.authState.subscribe((firebaseUser) => {
+        if(firebaseUser){
+          localStorage.setItem(identifire,firebaseUser.uid);
+          console.log('user = ' + firebaseUser.uid);
+          this.loadingProvider.stopLoading();
+          this.navCtrl.setRoot('ProfilePage',{res:firebaseUser});
+        }else{
+          this.token = null;
+          console.log('user = null');
+          this.loadingProvider.stopLoading();
+        }
+      }
+        )
 
   }
 
@@ -111,9 +111,9 @@ export class LoginPage {
         })
         this.loadingProvider.stopLoading();
   	}else if(isLogin == "google"){
-      console.log('adsfasdfaaa');
+      
         this.AuthServ.createUserWithGoogle();
-        this.gotoHome();
+
       // this.loadingProvider.startLoading();
       // let provider = new firebase.auth.GoogleAuthProvider();
       //   firebase.auth().signInWithRedirect(provider).then(() => {
