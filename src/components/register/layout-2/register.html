@@ -1,24 +1,28 @@
 <!-- Themes Register + Image -->
-<ion-content has-header white-background>
-    <ion-grid *ngIf="data != null">
-        <a (click)="gotoHome()">
-        HOME
-        </a>
-        <ion-row wrap padding>
-            <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-                <!--Logo-->
-                <div logo>
-                    <img [src]="data.logo" *ngIf="data.logo != null" />
-                      <h2 text-center text-center><strong>Hola, {{infoUser.email}}</strong></h2>
-                </div>
-                <!--End logo-->
-                <!--Form-->
-                <div>
-                <img [src]="data.camiseta"/>
-                <p>Ya estas participando por la camiseta de la seleccion!!!</p>
-                </div>
+<ion-content>
 
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+<ion-grid *ngIf="data != null">
+    <a (click)="gotoHome()" class="linkToHome">
+        HOME
+    </a>
+    <ion-row wrap padding>
+        <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+            <!--Logo-->
+            <div logo>
+                <img [src]="data.logo" *ngIf="data.logo != null" />
+                <h2 text-center text-center><strong>Hola, {{infoUser.email}}</strong></h2>
+            </div>
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+            <div logo>
+                <img class="camiseta" [src]="data.camiseta" />
+            </div>
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+            <ion-card-content>
+                Ya estas participando por la camiseta de la seleccion!!!
+            </ion-card-content>
+        </ion-col>
+    </ion-row>
+</ion-grid>
 </ion-content>

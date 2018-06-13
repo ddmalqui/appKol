@@ -4,7 +4,9 @@ register-layout-2 {
   [logo] {
       overflow: hidden;
   }
-
+  .scroll-content{
+    top : 0px !important;
+  }
   img {
     max-width: 250px;
     display: block;
