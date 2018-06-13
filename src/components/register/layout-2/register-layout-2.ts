@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
+import { HomePage } from '../../../pages/home/home';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ export class RegisterLayout2 {
     city: string;
     email: string;
 
-    constructor() { }
+    constructor(public navCtrl: NavController) { }
 
     onEvent = (event: string): void => {
         if (this.events[event]) {
@@ -31,4 +32,8 @@ export class RegisterLayout2 {
             });
         }
     }
+
+      gotoHome(){
+   this.navCtrl.setRoot('HomePage'); 
+  }
 }

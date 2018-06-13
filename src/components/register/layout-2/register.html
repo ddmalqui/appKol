@@ -10,19 +10,27 @@
             <!--Logo-->
             <div logo>
                 <img [src]="data.logo" *ngIf="data.logo != null" />
+                </div>
+                <div>
                 <h2 text-center text-center><strong>Hola, {{infoUser.email}}</strong></h2>
             </div>
         </ion-col>
-        <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-            <div logo>
-                <img class="camiseta" [src]="data.camiseta" />
-            </div>
-        </ion-col>
-        <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-            <ion-card-content>
-                Ya estas participando por la camiseta de la seleccion!!!
-            </ion-card-content>
-        </ion-col>
+        <ion-col col-12 col-md-12 col-lg-6>
+                <ion-card padding text-right class="card">
+                    <div text-center>
+                        <img src="{{data.camiseta}}" />
+                    </div>
+                    <!--Card-content-->
+                    <ion-card-content>
+                        <ion-card-title no-padding>
+                            <h2 card-title>{{infoUser.email}}</h2>
+                        </ion-card-title>
+                        <h3 card-subtitle class="h3-notice">Usted ya esta paricipando por la remera de la seleccion!!</h3>
+                        <!---Social share-->
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
     </ion-row>
 </ion-grid>
+
 </ion-content>

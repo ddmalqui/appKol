@@ -9,6 +9,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 import { LoginPage } from '../login/login';
+import { HomePage } from '../../pages/home/home';
 import { LoadingProvider } from '../../providers/loading/loading';
 
 declare var cordova: any;
@@ -35,7 +36,9 @@ export class RegisterPage {
   cnfpasswordtype:string='password';
   cnfpasseye:string='eye';
   passeye:string ='eye';
-  constructor(public platform: Platform, public camera: Camera, public file: File, public filePath: FilePath, public actionSheetCtrl: ActionSheetController, public toastCtrl: ToastController, public afAuth: AngularFireAuth, public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams,public loadingProvider: LoadingProvider){
+  constructor(public platform: Platform, public camera: Camera, public file: File, public filePath: FilePath,
+   public actionSheetCtrl: ActionSheetController, public toastCtrl: ToastController, 
+   public afAuth: AngularFireAuth, public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams,public loadingProvider: LoadingProvider){
   	this.authForm = this.fb.group({
           'username' : [null, Validators.compose([Validators.required])],
           'email': [null, Validators.compose([Validators.required])],
@@ -183,5 +186,7 @@ private copyFileToLocalDir(namePath, currentName, newFileName) {
       this.cnfpasseye = 'eye';
     }
   }
+
+
 
 }
