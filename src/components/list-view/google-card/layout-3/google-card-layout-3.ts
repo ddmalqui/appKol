@@ -6,6 +6,9 @@ import { Authentication } from '../../../../services/authentication';
 
 import { LoadingProvider } from '../../../../providers/loading/loading';
 
+
+//https://ionicframework.com/docs/native/image-picker/
+
 @IonicPage()
 @Component({
     selector: 'google-card-layout-3',
